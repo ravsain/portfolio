@@ -241,24 +241,15 @@
 
                 <div class="bento-card card-sm card-metrics reveal-up" data-tilt data-delay="0.3">
                     <div class="card-content">
-                        <div class="card-icon-wrap accent-pink"><i class="fas fa-chart-bar"></i></div>
-                        <h3>Impact Numbers</h3>
-                        <div class="metrics-list">
-                            <div class="metric-row">
-                                <span class="metric-label">Team Proficiency</span>
-                                <div class="metric-bar-wrap"><div class="metric-bar bar-green" style="--w:60%"></div></div>
-                                <span class="metric-val">60th %ile</span>
-                            </div>
-                            <div class="metric-row">
-                                <span class="metric-label">Delivery Cadence</span>
-                                <div class="metric-bar-wrap"><div class="metric-bar" style="--w:90%"></div></div>
-                                <span class="metric-val">90%</span>
-                            </div>
-                            <div class="metric-row">
-                                <span class="metric-label">MBA GPA Band</span>
-                                <div class="metric-bar-wrap"><div class="metric-bar bar-purple" style="--w:85%"></div></div>
-                                <span class="metric-val">2024</span>
-                            </div>
+                        <div class="card-icon-wrap accent-pink"><i class="fas fa-star"></i></div>
+                        <h3>Soft &amp; Leadership Skills</h3>
+                        <div class="soft-skills-grid">
+                            <div class="soft-pill"><i class="fas fa-comments"></i> Communication</div>
+                            <div class="soft-pill"><i class="fas fa-handshake"></i> Stakeholder Mgmt</div>
+                            <div class="soft-pill"><i class="fas fa-users"></i> Team Leadership</div>
+                            <div class="soft-pill"><i class="fas fa-chalkboard-teacher"></i> Agile & scrum</div>
+                            <div class="soft-pill"><i class="fas fa-lightbulb"></i> Problem Solving</div>
+                            <div class="soft-pill"><i class="fas fa-route"></i> Product Thinking</div>
                         </div>
                     </div>
                     <div class="card-glow glow-purple"></div>
@@ -380,17 +371,38 @@
                     <div class="card-glow glow-purple"></div>
                 </div>
 
+                <div class="project-card reveal-up" data-tilt data-delay="0.3">
+                    <div class="project-number">04</div>
+                    <div class="project-top">
+                        <div class="project-meta">
+                            <span class="project-role">Capstone Project</span>
+                            <span class="project-year">2024</span>
+                        </div>
+                        <a href="https://github.com/ravsain" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                    <h3>SkillRadar — Emerging Tech Intelligence</h3>
+                    <p>End-to-end data analytics &amp; ML platform answering: <em>which tech skills are in demand, what do they pay, and where is the market heading in 2027–28?</em> Pulls live data from 9 public APIs, trains ML models, and serves dual dashboards (Streamlit + Flask).</p>
+                    <div class="project-outcomes">
+                        <div class="outcome"><i class="fas fa-brain"></i> Holt-Winters forecasting to 2028 (80% CI)</div>
+                        <div class="outcome"><i class="fas fa-tree"></i> RandomForest salary predictor — R² 0.87</div>
+                        <div class="outcome"><i class="fas fa-satellite-dish"></i> 65 skills tracked across 9 live APIs</div>
+                    </div>
+                    <div class="project-tags"><span>Python</span><span>Streamlit</span><span>Flask</span><span>Plotly</span><span>scikit-learn</span><span>statsmodels</span></div>
+                    <div class="project-bar"><div class="project-progress" style="--w:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2))"></div></div>
+                    <div class="card-glow" style="background:radial-gradient(ellipse at var(--mx,50%) var(--my,50%),rgba(240,192,96,0.15),transparent 65%);"></div>
+                </div>
+
             </div>
         </section>
 
         <!-- CONTACT -->
         <section id="contact" class="section-pad">
             <div class="section-label reveal-up"><span>// 04</span> Contact</div>
-            <div class="contact-wrapper">
-                <div class="contact-left reveal-left">
-                    <h2 class="section-heading">Let us build<br><span class="gradient-text">something great.</span></h2>
-                    <p>I'm actively seeking opportunities in product, engineering, and tech operations. If you're looking for someone who builds, ships, and delivers — let's talk.</p>
-                    <div class="contact-info">
+            <div class="contact-wrapper contact-solo">
+                <div class="contact-left reveal-up">
+                    <h2 class="section-heading centered">Let's build<br><span class="gradient-text">something great.</span></h2>
+                    <p class="contact-intro">I'm actively seeking opportunities in product, engineering, and tech operations. If you're looking for someone who builds, ships, and delivers — reach out directly.</p>
+                    <div class="contact-info contact-info-grid">
                         <a href="mailto:ravsainz@gmail.com" class="contact-item">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div><span>Email</span><p>ravsainz@gmail.com</p></div>
@@ -408,25 +420,6 @@
                             <div><span>GitHub</span><p>github.com/ravsain</p></div>
                         </a>
                     </div>
-                </div>
-                <div class="contact-right reveal-right">
-                    <form class="contact-form glass-card" id="contactForm" novalidate>
-                        <div class="form-group">
-                            <label for="name">Your Name</label>
-                            <input type="text" id="name" name="name" placeholder="John Doe" autocomplete="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Your Email</label>
-                            <input type="email" id="email" name="email" placeholder="john@company.com" autocomplete="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary full-width">
-                            <span>Send Message</span><i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
                 </div>
             </div>
         </section>

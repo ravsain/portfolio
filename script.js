@@ -171,15 +171,19 @@
   /* ── INTERSECTION REVEAL ────────────────────────── */
   var revealObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
-      if (!entry.isIntersecting) return;
       var el = entry.target;
       var delay = parseFloat(el.dataset.delay || 0);
-      setTimeout(function() {
-        el.classList.add('revealed');
-        $$('.metric-bar', el).forEach(function(b) { b.style.width = b.style.getPropertyValue('--w'); });
-        $$('.project-progress', el).forEach(function(b) { b.style.width = b.style.getPropertyValue('--w'); });
-      }, delay * 1000);
-      revealObserver.unobserve(el);
+      if (entry.isIntersecting) {
+        setTimeout(function() {
+          el.classList.add('revealed');
+          $$('.metric-bar', el).forEach(function(b) { b.style.width = b.style.getPropertyValue('--w'); });
+          $$('.project-progress', el).forEach(function(b) { b.style.width = b.style.getPropertyValue('--w'); });
+        }, delay * 1000);
+      } else {
+        el.classList.remove('revealed');
+        $$('.metric-bar', el).forEach(function(b) { b.style.width = '0'; });
+        $$('.project-progress', el).forEach(function(b) { b.style.width = '0'; });
+      }
     });
   }, { threshold: 0.12 });
 
@@ -190,8 +194,11 @@
   /* ── COUNTER ANIMATION ──────────────────────────── */
   var counterObserver = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
-      if (!entry.isIntersecting) return;
       var el = entry.target;
+      if (!entry.isIntersecting) {
+        el.textContent = '0';
+        return;
+      }
       var target = parseInt(el.dataset.target, 10);
       var duration = 1800;
       var start = performance.now();
@@ -202,7 +209,6 @@
         if (t < 1) raf(tick);
       }
       raf(tick);
-      counterObserver.unobserve(el);
     });
   }, { threshold: 0.6 });
 

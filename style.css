@@ -665,6 +665,21 @@ main { position:relative;z-index:1; }
 }
 .tool-badge i { color:var(--lavender);width:14px; }
 
+/* Soft skills pill grid (replaces metrics bars in card-metrics) */
+.soft-skills-grid { display:grid;grid-template-columns:1fr 1fr;gap:0.36rem;margin-top:0.4rem; }
+.soft-pill {
+  display:flex;align-items:center;gap:0.38rem;padding:0.3rem 0.5rem;
+  background:rgba(167,139,250,0.07);border:1px solid rgba(167,139,250,0.18);
+  border-radius:var(--r-xs);font-size:0.68rem;color:var(--lav-2);font-weight:500;
+  transition:all var(--t1);
+}
+.soft-pill i { color:var(--lavender);font-size:0.64rem;flex-shrink:0; }
+.soft-pill:hover {
+  background:rgba(167,139,250,0.16);border-color:rgba(167,139,250,0.45);
+  color:var(--titanium);transform:scale(1.03);
+  box-shadow:0 0 12px rgba(167,139,250,0.2);
+}
+
 /* Metrics bars */
 .metrics-list { display:flex;flex-direction:column;gap:0.6rem;margin-top:0.4rem; }
 .metric-row { display:flex;align-items:center;gap:0.5rem; }
@@ -826,8 +841,16 @@ main { position:relative;z-index:1; }
   display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;
   max-width:1280px;margin:0 auto;align-items:start;
 }
+/* Solo (no form) variant */
+.contact-solo {
+  grid-template-columns:1fr;max-width:760px;
+}
+.contact-solo .contact-left { text-align:center; }
+.contact-intro { color:var(--text-2);font-size:0.98rem;line-height:1.8;margin-bottom:2rem; }
 .contact-left p { color:var(--text-2);font-size:0.98rem;line-height:1.8;margin-bottom:2rem; }
 .contact-info { display:flex;flex-direction:column;gap:0.8rem; }
+/* 2×2 grid for 4 contact links */
+.contact-info-grid { display:grid;grid-template-columns:1fr 1fr;gap:0.8rem; }
 .contact-item {
   display:flex;align-items:center;gap:0.9rem;padding:0.85rem 1.1rem;
   background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r-md);
@@ -918,6 +941,7 @@ footer p { font-size:0.8rem;color:var(--text-dim); }
   .hero-right  { display:none; }
   .about-grid  { grid-template-columns:1fr; }
   .contact-wrapper { grid-template-columns:1fr;gap:2.5rem; }
+  .contact-info-grid { grid-template-columns:1fr; }
   .nav-links,.nav-cta { display:none; }
   .menu-toggle { display:flex; }
   .bento-grid { grid-template-columns:1fr;grid-template-rows:auto; }
