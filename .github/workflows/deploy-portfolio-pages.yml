@@ -1,0 +1,52 @@
+name: Deploy Portfolio to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "portfolio-pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare minimal site folder
+        run: |
+          set -e
+          rm -rf public_site
+          mkdir -p public_site
+          # copy core portfolio files (safe-fail if missing)
+          cp -v index.html public_site/ || true
+          cp -v style.css public_site/ || true
+          cp -v script.js public_site/ || true
+          cp -v "rav (1).pdf" public_site/ || true
+          # copy common asset dirs if present
+          for d in assets images static img; do
+            if [ -d "$d" ]; then cp -r "$d" public_site/; fi
+          done
+          # remove any sensitive files accidentally copied
+          rm -f public_site/.env public_site/*.key || true
+          echo "Prepared public_site contents:" && ls -la public_site
+
+      - name: Upload artifact (portfolio)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public_site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5
