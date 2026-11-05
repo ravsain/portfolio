@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-view="product">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PennyWise · Case study · Ravender Pratap Singh</title>
+<meta name="description" content="PennyWise: a live shared-budgeting app for web and mobile with a Netflix-style shared account model, built with React, React Native, Python and Supabase.">
+<meta name="author" content="Ravender Pratap Singh">
+<link rel="canonical" href="https://ravsain.github.io/portfolio/work/pennywise.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PennyWise · Case study · Ravender Pratap Singh">
+<meta property="og:description" content="PennyWise: a live shared-budgeting app for web and mobile with a Netflix-style shared account model, built with React, React Native, Python and Supabase.">
+<meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%235ee7c2'%3ER%3C/text%3E%3C/svg%3E">
+<script>
+  (function () {
+    var V = ['product', 'eng', 'ops'], v = 'product';
+    try {
+      var q = new URLSearchParams(location.search).get('view'), s = localStorage.getItem('rps-view');
+      v = V.indexOf(q) > -1 ? q : (V.indexOf(s) > -1 ? s : 'product');
+    } catch (e) {}
+    document.documentElement.setAttribute('data-view', v);
+    document.documentElement.classList.add('js');
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="logo" data-keep-view aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="../index.html#work" data-keep-view>All case studies</a></li>
+        <li><a href="../index.html#skills" data-keep-view>Skills</a></li>
+        <li><a href="../index.html#contact" data-keep-view>Contact</a></li>
+      </ul>
+    </nav>
+    <div class="viewswitch" role="group" aria-label="Show my profile for">
+      <button type="button" data-set-view="product" aria-pressed="true"><span class="vs-long">Product</span><span class="vs-short">Product</span></button>
+      <button type="button" data-set-view="eng" aria-pressed="false"><span class="vs-long">Engineering</span><span class="vs-short">Eng</span></button>
+      <button type="button" data-set-view="ops" aria-pressed="false"><span class="vs-long">Operations</span><span class="vs-short">Ops</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap">
+      <a class="back" href="../index.html#work" data-keep-view><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
+      <h1>PennyWise: budgeting for people who share money</h1>
+      <p class="eyebrow" style="margin-top:14px">Personal project · 2026 · live</p>
+      <p class="lede">A budgeting app for web and mobile built around a Netflix-style shared account: several people live under one primary account and see the same numbers in real time.</p>
+      <dl class="case-meta">
+          <div><dt>Role</dt><dd>Solo: product and full-stack build</dd></div>
+          <div><dt>Timeline</dt><dd>2026</dd></div>
+          <div><dt>Stack</dt><dd>React, React Native, Python API, Supabase (PostgreSQL), JWT, RBAC</dd></div>
+          <div><dt>Links</dt><dd class="slots"><a href="https://pennywise-rav.vercel.app" target="_blank" rel="noopener">Live app</a> <a href="https://mybudgetapp-e7yy.onrender.com/docs" target="_blank" rel="noopener">API docs</a> <!-- TODO: paste PennyWise GitHub link --><a data-slot href="#" target="_blank" rel="noopener">Code</a></dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <h2>How it fits together</h2>
+      <h3 class="mono" style="margin-top:22px;font-size:13px;color:var(--text-3);font-weight:500">// architecture</h3>
+        <div class="flow" role="list" aria-label="Architecture"><div class="flow-node"><small>clients</small><b>React web + React Native</b><span>One product, two platforms</span></div><span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span><div class="flow-node hl"><small>api</small><b>Python API</b><span>JWT auth and role-based access</span></div><span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span><div class="flow-node"><small>data</small><b>Supabase</b><span>PostgreSQL with row-level security and real-time sync</span></div></div>
+      <p class="flow-caption">Web is hosted on Vercel, the API on Render, and data on Supabase.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <h2>Three ways to read this project</h2>
+      <p class="sub">All of them are here. The one that matches the view you picked comes first.</p>
+      <div class="lenses">
+          <article class="lens" data-lens="product">
+            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Product lens</h3><span class="lens-badge">matches your view</span></div>
+            <ul class="points"><li>Designed the <strong>shared account model</strong>: one primary account with several members, like a family streaming plan.</li><li>Real-time sync so every member sees the same balance at the same time.</li><li>Built for web and mobile, so people can budget wherever they are.</li></ul>
+          </article>
+          <article class="lens" data-lens="eng">
+            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Engineering lens</h3><span class="lens-badge">matches your view</span></div>
+            <ul class="points"><li>React web app and React Native mobile app sharing one <strong>Python API</strong>.</li><li><strong>Supabase (PostgreSQL)</strong> with row-level security policies protecting each account's data.</li><li><strong>JWT</strong> authentication and role-based access control for multi-user accounts.</li><li>Documented API with interactive docs.</li></ul>
+          </article>
+          <article class="lens" data-lens="ops">
+            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Operations lens</h3><span class="lens-badge">matches your view</span></div>
+            <ul class="points"><li>Shipped and running: web on Vercel, API on Render, data on Supabase.</li><li>Access is checked in the API and again in the database through row-level security.</li></ul>
+          </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <h2>Outcome</h2>
+      <div class="outcome">
+        <p>Live and usable today, on web and mobile.</p>
+        <div class="outcome-stats"><div><b>2</b><span>platforms: web and mobile</span></div><div><b>RLS</b><span>security inside the database</span></div><div><b>Live</b><span>try it now</span></div></div>
+      </div>
+
+      <div class="hero-actions" style="margin-top:28px">
+        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
+        <a class="btn btn-ghost" href="../index.html#contact" data-keep-view>Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <nav class="case-nav" aria-label="More case studies">
+        <a href="kanbanhub.html" data-keep-view><small>← previous</small><b>KanbanHub</b></a>
+        <a href="skillradar.html" data-keep-view><small>next →</small><b>SkillRadar</b></a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span data-year>2026</span> Ravender Pratap Singh</span>
+    <span>Press <kbd>~</kbd> to open the terminal</span>
+    <div class="footer-links">
+      <button type="button" class="term-open" data-terminal aria-label="Open terminal">&gt;_ terminal</button>
+      <a href="mailto:ravsainz@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/r-p-s" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="https://github.com/ravsain" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

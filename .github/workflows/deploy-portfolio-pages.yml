@@ -33,9 +33,8 @@ jobs:
           cp -v index.html public_site/ || true
           cp -v style.css public_site/ || true
           cp -v script.js public_site/ || true
-          cp -v "rav (1).pdf" public_site/ || true
-          # copy common asset dirs if present
-          for d in assets images static img; do
+          # copy site folders: case studies, both resumes, images
+          for d in work resume operation-resume assets images static img; do
             if [ -d "$d" ]; then cp -r "$d" public_site/; fi
           done
           # remove any sensitive files accidentally copied

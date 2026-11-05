@@ -1,442 +1,541 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-view="product">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravender Pratap Singh | Product &amp; Quality Lead &middot; Builder</title>
-    <meta name="description" content="Portfolio of Ravender Pratap Singh — Product &amp; Quality Lead with 3+ years building Go POS systems, Python AI agents, and Scrumban-driven delivery. MBA in Business Analytics.">
-    <meta name="author" content="Ravender Pratap Singh">
-    <meta property="og:title" content="Ravender Pratap Singh | Product &amp; Quality Lead &middot; Builder">
-    <meta property="og:description" content="Go-powered POS systems, Python AI agents, Scrumban delivery. Open to product, engineering &amp; tech-ops roles. MBA in Business Analytics.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravender Pratap Singh · Product Analyst, Developer &amp; Operations Lead</title>
+<meta name="description" content="Ravender Pratap Singh: Product & Quality Analyst with an MBA in Business Analytics and 3+ years across product, QA automation and data. Go, Python, React, SQL, Scrumban. Open to product, engineering and operations roles in Gurugram.">
+<meta name="author" content="Ravender Pratap Singh">
+<link rel="canonical" href="https://ravsain.github.io/portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ravsain.github.io/portfolio/">
+<meta property="og:title" content="Ravender Pratap Singh · Product, Engineering & Operations">
+<meta property="og:description" content="I turn business problems into shipped software. Go POS rebuild, Python LLM agent, payment gateway, Scrumban delivery. MBA in Business Analytics.">
+<meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07070f">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%235ee7c2'%3ER%3C/text%3E%3C/svg%3E">
+<script>
+  /* set the view before first paint so there's no flash */
+  (function () {
+    var V = ['product', 'eng', 'ops'], v = 'product';
+    try {
+      var q = new URLSearchParams(location.search).get('view'), s = localStorage.getItem('rps-view');
+      v = V.indexOf(q) > -1 ? q : (V.indexOf(s) > -1 ? s : 'product');
+    } catch (e) {}
+    document.documentElement.setAttribute('data-view', v);
+    document.documentElement.classList.add('js');
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-root="">
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Aurora Background -->
-    <div class="aurora" aria-hidden="true">
-        <div class="a1"></div>
-        <div class="a2"></div>
-        <div class="a3"></div>
+<!-- ── NAV ─────────────────────────────────────────────── -->
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="#top" class="logo" aria-label="Ravender Pratap Singh, back to top">RPS<span>.</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="#how">How I work</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Case studies</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="viewswitch" role="group" aria-label="Show my profile for">
+      <button type="button" data-set-view="product" aria-pressed="true"><span class="vs-long">Product</span><span class="vs-short">Product</span></button>
+      <button type="button" data-set-view="eng" aria-pressed="false"><span class="vs-long">Engineering</span><span class="vs-short">Eng</span></button>
+      <button type="button" data-set-view="ops" aria-pressed="false"><span class="vs-long">Operations</span><span class="vs-short">Ops</span></button>
     </div>
+    <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <ul>
+    <li><a href="#how">How I work</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#work">Case studies</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor-ring" id="cursorRing"></div>
-    <div class="cursor-dot" id="cursorDot"></div>
+<main id="main">
 
-    <!-- Loading Screen -->
-    <div class="loader" id="loader">
-        <div class="loader-inner">
-            <div class="loader-logo">RPS</div>
-            <div class="loader-bar"><div class="loader-fill"></div></div>
-            <span class="loader-text">Initializing Experience...</span>
+<!-- ── HERO ────────────────────────────────────────────── -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <span class="status"><i aria-hidden="true"></i> Open to new roles · Gurugram, India</span>
+
+      <p class="hero-name"><b>Ravender Pratap Singh</b> ·
+        <span data-only="product">Product Analyst</span><span data-only="eng">Software Developer</span><span data-only="ops">Operations &amp; Program Lead</span>
+      </p>
+
+      <h1 class="hero-title">
+        <span data-only="product">I turn business problems into <em>shipped software.</em></span>
+        <span data-only="eng">I build the systems <em>I&nbsp;spec.</em></span>
+        <span data-only="ops">I help teams ship <em>predictably.</em></span>
+      </h1>
+
+      <p class="hero-sub" data-only="product">MBA in Business Analytics with 3+ years across product, QA and data. I gather requirements, write the PRD, prioritise the backlog, and stay with the feature until it's tested and live.</p>
+      <p class="hero-sub" data-only="eng">I work in Go, Python and React. At Vervebot I led a from-scratch Point of Sale rebuild on a Go backend, put a Python LLM agent into production, and covered critical flows with Playwright and API automation.</p>
+      <p class="hero-sub" data-only="ops">I moved a dev team to Scrumban, coordinated a payment gateway rollout across business and engineering, and automated 30% of testing for 20% faster cycles. Process first, then tools.</p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" data-cv href="resume/Ravender_Pratap_Singh_Resume.pdf" download>
+          <i class="fas fa-download" aria-hidden="true"></i>
+          <span data-only="product">Download Product CV</span><span data-only="eng">Download Developer CV</span><span data-only="ops">Download Operations CV</span>
+        </a>
+        <a class="btn btn-ghost" href="#work">See case studies <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+
+      <div class="picker">
+        <p class="picker-label">// what are you hiring for?</p>
+        <div class="picker-options" role="group" aria-label="What are you hiring for?">
+          <button type="button" class="pick" data-set-view="product" aria-pressed="true"><b><i></i>Product</b><span>Product Analyst, Product Owner, Business Analyst</span></button>
+          <button type="button" class="pick" data-set-view="eng" aria-pressed="false"><b><i></i>Engineering</b><span>Software Developer, QA Automation, Full-stack</span></button>
+          <button type="button" class="pick" data-set-view="ops" aria-pressed="false"><b><i></i>Operations</b><span>Operations, Program Manager, Scrum Master</span></button>
         </div>
+      </div>
     </div>
 
-    <!-- Animated Background Canvas -->
-    <canvas id="meshCanvas"></canvas>
+    <!-- recruiter quick-fit card -->
+    <aside class="fitcard reveal" aria-label="Quick summary for recruiters">
+      <div class="fitcard-top"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="mono">recruiter_tldr.md</span></div>
 
-    <!-- Navigation -->
-    <header id="header">
-        <nav>
-            <div class="logo">RPS<span class="logo-dot">.</span></div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#expertise">Expertise</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="#contact" class="nav-cta">Hire Me <i class="fas fa-arrow-right"></i></a>
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
-                <span></span><span></span><span></span>
-            </button>
-        </nav>
-    </header>
+      <h3 data-only="product">A product analyst who can also build and test.</h3>
+      <h3 data-only="eng">A developer who understands the business case.</h3>
+      <h3 data-only="ops">An operations lead who knows how the software works.</h3>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <ul>
-            <li><a href="#hero" class="mobile-nav-link">Home</a></li>
-            <li><a href="#about" class="mobile-nav-link">About</a></li>
-            <li><a href="#expertise" class="mobile-nav-link">Expertise</a></li>
-            <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
-            <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-        </ul>
+      <div class="fit-roles" data-only="product"><span>Product Analyst</span><span>Product Owner</span><span>Business Analyst</span></div>
+      <div class="fit-roles" data-only="eng"><span>Software Developer</span><span>Go / Python</span><span>QA Automation</span></div>
+      <div class="fit-roles" data-only="ops"><span>Operations</span><span>Program Manager</span><span>Scrum Master</span></div>
+
+      <dl class="fit-facts">
+        <dt>experience</dt><dd>3+ years · product, QA &amp; data</dd>
+        <dt>now</dt><dd>Product &amp; Quality Analyst, Vervebot</dd>
+        <dt>education</dt><dd>MBA, Business Analytics</dd>
+        <dt>toolkit</dt>
+        <dd data-only="product">Jira · PRDs · SQL · Tableau · Python</dd>
+        <dd data-only="eng">Go · Python · React/TS · PostgreSQL · Playwright</dd>
+        <dd data-only="ops">Jira · Trello · Scrumban · Excel · SQL</dd>
+        <dt>based in</dt><dd>Gurugram, India</dd>
+      </dl>
+
+      <div class="fit-proof" data-only="product">
+        <div><b>3+ yrs</b><span>product, QA &amp; data</span></div>
+        <div><b>MBA</b><span>business analytics</span></div>
+        <div><b>5</b><span>case studies below</span></div>
+      </div>
+      <div class="fit-proof" data-only="eng">
+        <div><b>Go</b><span>POS backend rebuild</span></div>
+        <div><b>R² 0.87</b><span>salary prediction model</span></div>
+        <div><b>30%</b><span>tests automated</span></div>
+      </div>
+      <div class="fit-proof" data-only="ops">
+        <div><b>30%</b><span>testing automated</span></div>
+        <div><b>20%</b><span>faster test cycles</span></div>
+        <div><b>3</b><span>companies, cross-team delivery</span></div>
+      </div>
+
+      <a class="btn btn-ghost btn-sm" data-cv href="resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i> One-page CV for this role</a>
+    </aside>
+  </div>
+</section>
+
+<!-- ── HOW I WORK ──────────────────────────────────────── -->
+<section class="section" id="how">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">How I work</span>
+      <h2>The whole loop, not one slice of it.</h2>
+      <p>Most roles cover one or two of these stages. I've done all six, which is why requirements, code, tests and delivery don't fall apart between teams.</p>
+    </div>
+    <ol class="cycle reveal" style="list-style:none">
+      <li class="stage" data-lenses="product"><h3>Discover</h3><p>Talk to clients and stakeholders to find the real problem behind the request.</p><div class="tags"><span class="tag">Stakeholders</span><span class="tag">Requirements</span></div></li>
+      <li class="stage" data-lenses="product ops"><h3>Define</h3><p>Turn it into PRDs, specs and a prioritised backlog the team can start on.</p><div class="tags"><span class="tag">PRDs</span><span class="tag">Backlog</span></div></li>
+      <li class="stage" data-lenses="eng"><h3>Build</h3><p>Write the code: Go services, Python agents, React front ends.</p><div class="tags"><span class="tag">Go</span><span class="tag">Python</span><span class="tag">React</span></div></li>
+      <li class="stage" data-lenses="eng ops"><h3>Test</h3><p>Automate the checks so every release is safer than the last.</p><div class="tags"><span class="tag">Playwright</span><span class="tag">Selenium</span></div></li>
+      <li class="stage" data-lenses="ops"><h3>Ship</h3><p>Run delivery with Scrumban and coordinate the rollout across teams.</p><div class="tags"><span class="tag">Scrumban</span><span class="tag">Jira</span></div></li>
+      <li class="stage" data-lenses="product ops"><h3>Measure</h3><p>Read the data with SQL and dashboards, then feed what I learn into the next cycle.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Dashboards</span></div></li>
+    </ol>
+    <p class="cycle-note">
+      <span data-only="product">Highlighted: where a <b>product</b> team gets the most from me.</span>
+      <span data-only="eng">Highlighted: where an <b>engineering</b> team gets the most from me.</span>
+      <span data-only="ops">Highlighted: where an <b>operations</b> team gets the most from me.</span>
+      Switch the view at the top to see the others.
+    </p>
+  </div>
+</section>
+
+<!-- ── EXPERIENCE ──────────────────────────────────────── -->
+<section class="section" id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Experience</span>
+      <h2>Three companies, one thread: making delivery work.</h2>
     </div>
 
-    <main>
-        <!-- HERO -->
-        <section id="hero">
-            <div class="hero-layout">
-                <div class="hero-left">
-                    <div class="hero-badge reveal-up">
-                        <span class="badge-dot"></span> Available for Opportunities
-                    </div>
-                    <h1 class="hero-name reveal-up">
-                        <span class="name-line">Ravender</span>
-                        <span class="name-line gradient-text gradient-name">Pratap Singh</span>
-                    </h1>
-                    <p class="hero-title reveal-up">Product &amp; Quality Lead &middot; Analyst &middot; Builder</p>
-                    <p class="hero-sub reveal-up">Building <strong>Go-powered POS systems</strong>, <strong>Python AI agents</strong>, and driving <strong>Scrumban delivery</strong> at the intersection of engineering and business. MBA in Business Analytics.</p>
-                    <div class="hero-actions reveal-up">
-                        <a href="#projects" class="btn-primary"><span>View My Work</span><i class="fas fa-arrow-right"></i></a>
-                        <a href="#contact" class="btn-ghost"><span>Let's Talk</span></a>
-                        <a href="rav (1).pdf" download="Ravender_Pratap_Singh_Resume.pdf" class="btn-ghost btn-cv"><i class="fas fa-download"></i><span>Download CV</span></a>
-                    </div>
-                    <div class="hero-stats reveal-up">
-                        <div class="stat"><div class="stat-row"><span class="stat-num" data-target="3">0</span><span>+</span></div><p>Years Exp.</p></div>
-                        <div class="stat-divider"></div>
-                        <div class="stat"><div class="stat-row"><span class="stat-num" data-target="5">0</span><span>+</span></div><p>Projects</p></div>
-                        <div class="stat-divider"></div>
-                        <div class="stat"><div class="stat-row"><span class="stat-num" data-target="3">0</span><span></span></div><p>Companies</p></div>
-                    </div>
-                </div>
-                <div class="hero-right reveal-right">
-                    <div class="hero-card-wrapper">
-                        <div class="floating-card card-top-left glass-card">
-                            <i class="fas fa-robot" style="color:var(--mint)"></i><span>Python AI Agent Built</span>
-                        </div>
-                        <div class="floating-card card-top-right glass-card">
-                            <i class="fas fa-code" style="color:var(--lavender)"></i><span>Go-Powered POS</span>
-                        </div>
-                        <div class="profile-orb">
-                            <div class="orb-ring ring-1"></div>
-                            <div class="orb-ring ring-2"></div>
-                            <div class="orb-ring ring-3"></div>
-                            <div class="orb-core"><span class="orb-initials">RPS</span></div>
-                        </div>
-                        <div class="floating-card card-bottom glass-card">
-                            <div class="mini-chart">
-                                <div class="bar" style="--h:60%"></div>
-                                <div class="bar" style="--h:80%"></div>
-                                <div class="bar" style="--h:55%"></div>
-                                <div class="bar" style="--h:90%"></div>
-                                <div class="bar" style="--h:75%"></div>
-                                <div class="bar active" style="--h:100%"></div>
-                            </div>
-                            <span>Sprint Delivery</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="scroll-hint">
-                <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-                <span>Scroll to explore</span>
-            </div>
-        </section>
-
-        <!-- ABOUT -->
-        <section id="about" class="section-pad">
-            <div class="section-label reveal-up"><span>// 01</span> About Me</div>
-            <div class="about-grid">
-                <div class="about-text-block reveal-left">
-                    <h2 class="section-heading">The analyst who<br><span class="gradient-text">ships things.</span></h2>
-                    <p>I'm Ravender — a <strong>Product &amp; Quality Lead</strong> with an MBA in Business Analytics and 3+ years across Agile, data, and software delivery. I've built a Go-powered POS from scratch, shipped a Python LLM agent into production, and led teams across Vervebot, GlobalLogic, and Filo Edtech.</p>
-                    <p>My edge is bridging <strong>technical execution and business goals</strong> — turning client requirements into scalable systems and messy workflows into Scrumban-driven pipelines.</p>
-                    <div class="about-tags">
-                        <span class="tag">Agile Management</span>
-                        <span class="tag">Python</span>
-                        <span class="tag">Scrum</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">Python, JS, Go</span>
-                        <span class="tag">Data Analytics</span>
-                        <span class="tag">LLMs / AI Agents</span>
-                    </div>
-                </div>
-                <div class="about-visual reveal-right">
-                    <div class="skills-wheel">
-                        <div class="skill-arc" style="--angle:0deg;--delay:0s"><div class="skill-pill"><i class="fas fa-tasks"></i> Project Mgmt</div></div>
-                        <div class="skill-arc" style="--angle:60deg;--delay:0.1s"><div class="skill-pill"><i class="fas fa-sync-alt"></i> Agile &amp; Scrum</div></div>
-                        <div class="skill-arc" style="--angle:120deg;--delay:0.2s"><div class="skill-pill"><i class="fas fa-file-alt"></i> PRDs &amp; Specs</div></div>
-                        <div class="skill-arc" style="--angle:180deg;--delay:0.3s"><div class="skill-pill"><i class="fas fa-list-check"></i> Backlog Grooming</div></div>
-                        <div class="skill-arc" style="--angle:240deg;--delay:0.4s"><div class="skill-pill"><i class="fas fa-road"></i> Roadmap &amp; Delivery</div></div>
-                        <div class="skill-arc" style="--angle:300deg;--delay:0.5s"><div class="skill-pill"><i class="fas fa-chart-pie"></i> Biz Analytics</div></div>
-                        <div class="skills-center-orb"><span>Core</span><span>Skills</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- EXPERTISE BENTO GRID -->
-        <section id="expertise" class="section-pad">
-            <div class="section-label reveal-up"><span>// 02</span> Expertise</div>
-            <h2 class="section-heading centered reveal-up">Skills &amp; Experience<br><span class="gradient-text">Expertise Grid</span></h2>
-            <div class="bento-grid" id="bentoGrid">
-
-                <div class="bento-card card-fluid reveal-up" data-tilt>
-                    <canvas class="fluid-canvas" data-fluid></canvas>
-                    <div class="card-content">
-                        <div class="card-icon-wrap"><i class="fas fa-sitemap"></i></div>
-                        <h3>Technical &amp; Business Bridge</h3>
-                        <p>Expert at translating client requirements into actionable technical specifications for development teams. Applied across product cycles at Vervebot and mentoring programs at GlobalLogic — bridging <strong>business goals and engineering delivery</strong> through PRDs, stakeholder alignment, and Scrumban workflows.</p>
-                        <div class="card-tags"><span>Requirements Gathering</span><span>PRDs</span><span>Stakeholder Alignment</span><span>Scrumban</span></div>
-                    </div>
-                    <div class="card-glow"></div>
-                </div>
-
-                <div class="bento-card card-sm reveal-up" data-tilt data-delay="0.1">
-                    <div class="card-content">
-                        <div class="card-icon-wrap accent-green"><i class="fas fa-sync-alt"></i></div>
-                        <h3>Agile &amp; Scrumban</h3>
-                        <p>Transitioned team to Scrumban at Vervebot using Trello &amp; Jira-hybrid. Proficient in Agile, Scrum, Kanban, and Waterfall.</p>
-                        <div class="progress-rings">
-                            <div class="progress-ring-wrap">
-                                <svg viewBox="0 0 60 60"><circle class="ring-bg" cx="30" cy="30" r="24"/><circle class="ring-fill" cx="30" cy="30" r="24" style="--pct:0.90"/></svg>
-                                <span>90%</span><p>Agile</p>
-                            </div>
-                            <div class="progress-ring-wrap">
-                                <svg viewBox="0 0 60 60"><circle class="ring-bg" cx="30" cy="30" r="24"/><circle class="ring-fill" cx="30" cy="30" r="24" style="--pct:0.85"/></svg>
-                                <span>85%</span><p>Delivery</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-glow glow-green"></div>
-                </div>
-
-                <div class="bento-card card-sm reveal-up" data-tilt data-delay="0.2">
-                    <div class="card-content">
-                        <div class="card-icon-wrap accent-purple"><i class="fas fa-robot"></i></div>
-                        <h3>Python AI Agent</h3>
-                        <p>Headed development of an in-house <strong>LLM-based AI agent</strong> integrated into the POS system for real-time sales insights and automated merchant support at Vervebot.</p>
-                        <div class="card-tags"><span>Python</span><span>LLMs</span><span>Automation</span></div>
-                    </div>
-                    <div class="card-glow glow-purple"></div>
-                </div>
-
-                <div class="bento-card card-wide reveal-up" data-tilt data-delay="0.15">
-                    <div class="card-content">
-                        <div class="card-icon-wrap accent-orange"><i class="fas fa-users"></i></div>
-                        <h3>Team Leadership &amp; Mentorship</h3>
-                        <p>Led cross-functional teams at Vervebot; evaluated and mentored engineers at GlobalLogic alongside Google's AI team. Raised Filo's team proficiency from <strong>35th → 60th percentile</strong>.</p>
-                        <div class="team-avatars">
-                            <div class="avatar" style="--c:#6366f1">V</div>
-                            <div class="avatar" style="--c:#10b981">G</div>
-                            <div class="avatar" style="--c:#f59e0b">F</div>
-                            <div class="avatar avatar-plus">+</div>
-                        </div>
-                    </div>
-                    <div class="card-glow glow-orange"></div>
-                </div>
-
-                <div class="bento-card card-sm reveal-up" data-tilt data-delay="0.25">
-                    <div class="card-content">
-                        <div class="card-icon-wrap accent-cyan"><i class="fas fa-tools"></i></div>
-                        <h3>Tools &amp; Stack</h3>
-                        <div class="tools-grid">
-                            <div class="tool-badge"><i class="fab fa-golang" style="color:#00acd7"></i> Go</div>
-                            <div class="tool-badge"><i class="fab fa-python" style="color:#3572A5"></i> Python</div>
-                            <div class="tool-badge"><i class="fas fa-database"></i> SQL</div>
-                            <div class="tool-badge"><i class="fas fa-th-large"></i> Trello</div>
-                            <div class="tool-badge"><i class="fas fa-vial"></i> Postman</div>
-                            <div class="tool-badge"><i class="fab fa-github"></i> GitHub</div>
-                        </div>
-                    </div>
-                    <div class="card-glow glow-cyan"></div>
-                </div>
-
-                <div class="bento-card card-sm card-metrics reveal-up" data-tilt data-delay="0.3">
-                    <div class="card-content">
-                        <div class="card-icon-wrap accent-pink"><i class="fas fa-star"></i></div>
-                        <h3>Soft &amp; Leadership Skills</h3>
-                        <div class="soft-skills-grid">
-                            <div class="soft-pill"><i class="fas fa-comments"></i> Communication</div>
-                            <div class="soft-pill"><i class="fas fa-handshake"></i> Stakeholder Mgmt</div>
-                            <div class="soft-pill"><i class="fas fa-users"></i> Team Leadership</div>
-                            <div class="soft-pill"><i class="fas fa-chalkboard-teacher"></i> Agile & scrum</div>
-                            <div class="soft-pill"><i class="fas fa-lightbulb"></i> Problem Solving</div>
-                            <div class="soft-pill"><i class="fas fa-route"></i> Product Thinking</div>
-                        </div>
-                    </div>
-                    <div class="card-glow glow-purple"></div>
-                </div>
-
-                <!-- DB Gold Icon Card —  Data & Analytics -->
-                <div class="bento-card card-db reveal-up" data-tilt data-delay="0.35">
-                    <div class="card-content" style="align-items:center;justify-content:center;gap:0.6rem;">
-                        <div class="card-icon-wrap accent-gold" style="width:44px;height:44px;"><i class="fas fa-database"></i></div>
-                        <h3 style="text-align:center;">Data &amp; Analytics</h3>
-                        <div class="db-container">
-                            <div class="db-orbit">
-                                <div class="db-icon">
-                                    <div class="db-top"></div>
-                                    <div class="db-body"></div>
-                                    <div class="db-bottom"></div>
-                                </div>
-                            </div>
-                            <div class="db-caustic"></div>
-                        </div>
-                    </div>
-                    <div class="card-glow" style="background:radial-gradient(ellipse at var(--mx,50%) var(--my,50%),rgba(240,192,96,0.2),transparent 65%);"></div>
-                </div>
-
-                <!-- Client Bridge & Requirements -->
-                <div class="bento-card reveal-up" data-tilt data-delay="0.4">
-                    <div class="card-content">
-                        <div class="card-icon-wrap" style="background:rgba(94,231,194,0.1);border-color:rgba(94,231,194,0.25);color:#5ee7c2;"><i class="fas fa-handshake"></i></div>
-                        <h3>Client &amp; Stakeholder Bridge</h3>
-                        <p>Bridge between clients and engineering at Vervebot — turning requirements into precise technical specs and PRDs for each product sprint.</p>
-                        <div class="card-tags"><span>Requirements Gathering</span><span>Specs</span><span>Stakeholders</span></div>
-                    </div>
-                    <div class="card-glow glow-green"></div>
-                </div>
-
-                <!-- Certifications & Education card -->
-                <div class="bento-card reveal-up" data-tilt data-delay="0.45">
-                    <div class="card-content">
-                        <div class="card-icon-wrap accent-purple"><i class="fas fa-graduation-cap"></i></div>
-                        <h3>Education &amp; Certs</h3>
-                        <div class="tools-grid">
-                            <div class="tool-badge"><i class="fas fa-trophy" style="color:var(--gold)"></i> MBA Analytics</div>
-                            <div class="tool-badge"><i class="fas fa-check" style="color:var(--mint)"></i> Data Analyst</div>
-                            <div class="tool-badge"><i class="fas fa-check" style="color:var(--mint)"></i> Project Mgmt</div>
-                            <div class="tool-badge"><i class="fas fa-fist-raised" style="color:var(--lavender)"></i> Blackbelt</div>
-                        </div>
-                    </div>
-                    <div class="card-glow glow-purple"></div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects" class="section-pad">
-            <div class="section-label reveal-up"><span>// 03</span> Projects</div>
-            <h2 class="section-heading centered reveal-up">Built with<br><span class="gradient-text">Purpose &amp; Precision</span></h2>
-            <div class="projects-grid">
-
-                <div class="project-card reveal-up" data-tilt>
-                    <div class="project-number">01</div>
-                    <div class="project-top">
-                        <div class="project-meta">
-                            <span class="project-role">Personal Project</span>
-                            <span class="project-live"><i class="fas fa-circle"></i> LIVE</span>
-                            <span class="project-year">2026</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://pennywise-rav.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link" title="Live Frontend"><i class="fas fa-globe"></i></a>
-                            <a href="https://mybudgetapp-e7yy.onrender.com/docs" target="_blank" rel="noopener noreferrer" class="project-link" title="API Docs"><i class="fas fa-book-open"></i></a>
-                            <a href="https://github.com/ravsain" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3>PennyWise — Budget Sharing App</h3>
-                    <p>Dual-platform budget application with a <strong>Netflix-style shared account model</strong> — multiple users under a single primary ID. Built as both a <strong>mobile app</strong> (React Native) and a <strong>web app</strong> (React + Python backend), both backed by Supabase.</p>
-                    <div class="project-outcomes">
-                        <div class="outcome"><i class="fas fa-shield-alt"></i> Row-Level Security (RLS) via Supabase</div>
-                        <div class="outcome"><i class="fas fa-key"></i> JWT auth + RBAC for multi-user access</div>
-                        <div class="outcome"><i class="fas fa-bolt"></i> Real-time sync across all shared users</div>
-                    </div>
-                    <div class="project-live-links">
-                        <a href="https://pennywise-rav.vercel.app" target="_blank" rel="noopener noreferrer" class="project-live-link"><i class="fas fa-arrow-up-right-from-square"></i> Live App</a>
-                        <a href="https://mybudgetapp-e7yy.onrender.com/docs" target="_blank" rel="noopener noreferrer" class="project-live-link api-link"><i class="fas fa-code"></i> API Docs</a>
-                    </div>
-                    <div class="project-tags"><span>React Native</span><span>React</span><span>Python</span><span>Supabase</span><span>RLS</span><span>JWT</span></div>
-                    <div class="project-bar"><div class="project-progress" style="--w:85%"></div></div>
-                    <div class="card-glow"></div>
-                </div>
-
-                <div class="project-card reveal-up" data-tilt data-delay="0.1">
-                    <div class="project-number">02</div>
-                    <div class="project-top">
-                        <div class="project-meta"><span class="project-role">Vervebot</span><span class="project-year">2026</span></div>
-                    </div>
-                    <h3>In-House POS AI Agent</h3>
-                    <p>Led deployment of a <strong>Python-based LLM agent</strong> integrated into the Go POS system, delivering real-time sales insights and automating merchant support queries end-to-end.</p>
-                    <div class="project-outcomes">
-                        <div class="outcome"><i class="fas fa-check"></i> Python LLM integration into production POS</div>
-                        <div class="outcome"><i class="fas fa-check"></i> Automated merchant support query resolution</div>
-                    </div>
-                    <div class="project-tags"><span>Python</span><span>LLMs</span><span>Go (Backend Integration)</span><span>AI</span></div>
-                    <div class="project-bar"><div class="project-progress bar-green" style="--w:90%"></div></div>
-                    <div class="card-glow glow-green"></div>
-                </div>
-
-                <div class="project-card reveal-up" data-tilt data-delay="0.2">
-                    <div class="project-number">03</div>
-                    <div class="project-top">
-                        <div class="project-meta"><span class="project-role">Vervebot</span><span class="project-year">2025</span></div>
-                    </div>
-                    <h3>Go-Powered POS Redesign</h3>
-                    <p>Complete end-to-end redesign of a high-performance Point of Sale system at Vervebot, leveraging <strong>Go (Golang)</strong> for a scalable backend architecture and Goroutines for concurrent API load management.</p>
-                    <div class="project-outcomes">
-                        <div class="outcome"><i class="fas fa-check"></i> Scalable Go backend with Goroutines</div>
-                        <div class="outcome"><i class="fas fa-check"></i> Scrumban-driven delivery across sprints</div>
-                    </div>
-                    <div class="project-tags"><span>Go (Golang)</span><span>Goroutines</span><span>Scrumban</span><span>API Design</span></div>
-                    <div class="project-bar"><div class="project-progress bar-purple" style="--w:95%"></div></div>
-                    <div class="card-glow glow-purple"></div>
-                </div>
-
-                <div class="project-card reveal-up" data-tilt data-delay="0.3">
-                    <div class="project-number">04</div>
-                    <div class="project-top">
-                        <div class="project-meta">
-                            <span class="project-role">Capstone Project</span>
-                            <span class="project-year">2024</span>
-                        </div>
-                        <a href="https://github.com/ravsain" target="_blank" rel="noopener noreferrer" class="project-link" title="GitHub"><i class="fab fa-github"></i></a>
-                    </div>
-                    <h3>SkillRadar — Emerging Tech Intelligence</h3>
-                    <p>End-to-end data analytics &amp; ML platform answering: <em>which tech skills are in demand, what do they pay, and where is the market heading in 2027–28?</em> Pulls live data from 9 public APIs, trains ML models, and serves dual dashboards (Streamlit + Flask).</p>
-                    <div class="project-outcomes">
-                        <div class="outcome"><i class="fas fa-brain"></i> Holt-Winters forecasting to 2028 (80% CI)</div>
-                        <div class="outcome"><i class="fas fa-tree"></i> RandomForest salary predictor — R² 0.87</div>
-                        <div class="outcome"><i class="fas fa-satellite-dish"></i> 65 skills tracked across 9 live APIs</div>
-                    </div>
-                    <div class="project-tags"><span>Python</span><span>Streamlit</span><span>Flask</span><span>Plotly</span><span>scikit-learn</span><span>statsmodels</span></div>
-                    <div class="project-bar"><div class="project-progress" style="--w:100%;background:linear-gradient(90deg,var(--gold),var(--gold-2))"></div></div>
-                    <div class="card-glow" style="background:radial-gradient(ellipse at var(--mx,50%) var(--my,50%),rgba(240,192,96,0.15),transparent 65%);"></div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact" class="section-pad">
-            <div class="section-label reveal-up"><span>// 04</span> Contact</div>
-            <div class="contact-wrapper contact-solo">
-                <div class="contact-left reveal-up">
-                    <h2 class="section-heading centered">Let's build<br><span class="gradient-text">something great.</span></h2>
-                    <p class="contact-intro">I'm actively seeking opportunities in product, engineering, and tech operations. If you're looking for someone who builds, ships, and delivers — reach out directly.</p>
-                    <div class="contact-info contact-info-grid">
-                        <a href="mailto:ravsainz@gmail.com" class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                            <div><span>Email</span><p>ravsainz@gmail.com</p></div>
-                        </a>
-                        <a href="tel:+917023577505" class="contact-item">
-                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                            <div><span>Phone</span><p>+91 70235 77505</p></div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/r-p-s" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
-                            <div><span>LinkedIn</span><p>linkedin.com/in/r-p-s</p></div>
-                        </a>
-                        <a href="https://github.com/ravsain" target="_blank" rel="noopener noreferrer" class="contact-item">
-                            <div class="contact-icon"><i class="fab fa-github"></i></div>
-                            <div><span>GitHub</span><p>github.com/ravsain</p></div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-logo">RPS<span class="logo-dot">.</span></div>
-            <p>Crafted with intent &amp; precision. &copy; 2026 Ravender Pratap Singh.</p>
-            <div class="footer-links">
-                <a href="mailto:ravsainz@gmail.com"><i class="fas fa-envelope"></i></a>
-                <a href="https://www.linkedin.com/in/r-p-s" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-                <a href="https://github.com/ravsain" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
-            </div>
+    <div class="timeline">
+      <article class="job reveal" id="exp-vervebot" data-title="Vervebot · Product &amp; Quality Analyst" data-context="Experience · Apr 2025 – present"
+        data-skills="product-ownership requirements backlog stakeholders go python llm scrumban process automation coordination playwright api-testing regression">
+        <div class="job-side">
+          <div class="job-when">Apr 2025 – Present</div>
+          <div class="job-org">Vervebot</div>
+          <div class="job-place">Gurugram</div>
+          <span class="now">current role</span>
         </div>
-    </footer>
+        <div>
+          <h3 class="job-role">Product &amp; Quality Analyst (Automation)</h3>
+          <ul class="points" data-only="product eng">
+            <li>Led a from-scratch <strong>Point of Sale (POS) redesign</strong> on a scalable <strong>Go (Golang)</strong> backend, backed by <strong>Playwright</strong> and API test automation.</li>
+            <li>Led rollout of a <strong>Python LLM agent</strong> in the POS for real-time merchant sales insights and automated support queries.</li>
+            <li>Drove the <strong>in-house payment gateway</strong> integration, translating revenue goals into requirements, specs and PRDs.</li>
+            <li>Moved the development team to <strong>Scrumban</strong>; run standups, backlog grooming and sprint tracking in Jira and Trello.</li>
+            <li>Automated critical workflows and regression scenarios, cutting regression testing time and catching bugs before release.</li>
+          </ul>
+          <ul class="points" data-only="ops">
+            <li>Led the <strong>POS redesign program</strong> end to end, owning requirements, backlog priorities and delivery across teams.</li>
+            <li>Moved the development team to <strong>Scrumban</strong>, running standups, backlog grooming and sprint tracking in Jira and Trello.</li>
+            <li>Coordinated the <strong>in-house payment gateway integration</strong> across business and engineering, aligned to revenue goals.</li>
+            <li>Rolled out an <strong>AI agent</strong> in the POS that automates merchant support queries and delivers real-time sales insights.</li>
+            <li><strong>Automated critical workflows</strong> and regression checks, cutting regression time and catching issues before release.</li>
+          </ul>
+          <div class="tags">
+            <span class="tag">Go</span><span class="tag">Python</span><span class="tag">LLM agents</span><span class="tag">Playwright</span><span class="tag">API automation</span><span class="tag">Jira</span><span class="tag">Scrumban</span>
+          </div>
+        </div>
+      </article>
 
-    <script src="script.js"></script>
+      <article class="job reveal" id="exp-globallogic" data-title="GlobalLogic (client: Google) · Data Analyst" data-context="Experience · Dec 2024 – Apr 2025"
+        data-skills="sql pandas dashboards ai-eval python mentoring stakeholders data-analysis reporting">
+        <div class="job-side">
+          <div class="job-when">Dec 2024 – Apr 2025</div>
+          <div class="job-org">GlobalLogic</div>
+          <div class="job-place">Gurugram · client: Google</div>
+        </div>
+        <div>
+          <h3 class="job-role">Data Analyst</h3>
+          <ul class="points" data-only="product eng">
+            <li>Evaluated and fine-tuned <strong>AI model performance</strong> with Google client teams, ensuring high data quality and system reliability.</li>
+            <li>Performed data analysis with <strong>SQL, Pandas and NumPy</strong> and built dashboards that turned findings into actionable insights.</li>
+            <li>Mentored team members and conducted performance evaluations to build skills across the team.</li>
+          </ul>
+          <ul class="points" data-only="ops">
+            <li>Safeguarded <strong>data quality and reliability</strong> in AI model evaluation work for Google client teams.</li>
+            <li>Analysed data with <strong>SQL, Pandas and NumPy</strong> and built dashboards that turned findings into actionable insights.</li>
+            <li><strong>Mentored team members</strong> and ran performance evaluations to build skills across the team.</li>
+          </ul>
+          <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Dashboards</span><span class="tag">AI evaluation</span></div>
+        </div>
+      </article>
+
+      <article class="job reveal" id="exp-filo" data-title="Filo Edtech · Quality Analyst" data-context="Experience · Jun 2022 – Jul 2023"
+        data-skills="selenium regression test-design automation process quality coordination">
+        <div class="job-side">
+          <div class="job-when">Jun 2022 – Jul 2023</div>
+          <div class="job-org">Filo Edtech</div>
+          <div class="job-place">Gurugram</div>
+        </div>
+        <div>
+          <h3 class="job-role">Quality Analyst</h3>
+          <ul class="points" data-only="product eng">
+            <li><strong>Automated 30% of test scenarios with Selenium</strong>, improving test cycle efficiency by <strong>20%</strong> and reducing manual effort.</li>
+            <li>Designed and executed test cases for a high-traffic e-learning platform, keeping critical production defects to a minimum.</li>
+            <li>Ran functional, integration, regression and performance testing; triaged defects with product and engineering teams.</li>
+          </ul>
+          <ul class="points" data-only="ops">
+            <li><strong>Automated 30% of test scenarios</strong>, improving test cycle efficiency by <strong>20%</strong> and reducing manual effort.</li>
+            <li>Kept critical production defects to a minimum on a <strong>high-traffic e-learning platform</strong> through structured test design.</li>
+            <li>Worked with cross-functional teams to identify, document and resolve defects, ensuring high-quality releases.</li>
+          </ul>
+          <div class="tags"><span class="tag">Selenium</span><span class="tag">Test automation</span><span class="tag">Regression</span><span class="tag">Performance testing</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── CASE STUDIES ────────────────────────────────────── -->
+<!-- Order and size change with the view: --o-product / --o-eng / --o-ops set the order,
+     data-feature lists the views where the card is shown large. -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Case studies</span>
+      <h2>What I've built, and how I ran it.</h2>
+      <p>Each case study shows the product, engineering and operations side. The one that matches your view comes first.</p>
+    </div>
+
+    <div class="work-grid">
+
+      <article class="work-card reveal" id="work-pos" style="--o-product:1;--o-eng:1;--o-ops:1" data-feature="product eng ops"
+        data-title="Vervebot POS platform" data-context="Case study · 2025 – present"
+        data-skills="product-ownership requirements backlog stakeholders go python llm scrumban process automation coordination playwright api-testing">
+        <div class="work-meta"><span>Vervebot · work</span><span>2025 – now</span></div>
+        <h3>Rebuilding a Point of Sale from scratch</h3>
+        <div class="what">Go backend · payment gateway · LLM agent · Scrumban</div>
+        <p data-only="product">Owned requirements and PRDs for a full POS redesign, shaped the payment gateway around revenue goals and defined the AI agent merchants now use.</p>
+        <p data-only="eng">A scalable Go backend using goroutines for concurrent load, a Python LLM agent wired into the POS, and Playwright plus API automation guarding releases.</p>
+        <p data-only="ops">Moved the team to Scrumban to deliver it, coordinated the payment gateway rollout across business and engineering, and automated regression testing.</p>
+        <div class="tags"><span class="tag">Go</span><span class="tag">Python</span><span class="tag">LLM</span><span class="tag">Playwright</span><span class="tag">Scrumban</span></div>
+        <div class="work-foot">
+          <a class="work-link stretched" href="work/vervebot-pos.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" id="work-kanbanhub" style="--o-product:4;--o-eng:2;--o-ops:3" data-feature="eng"
+        data-title="KanbanHub" data-context="Project · 2026"
+        data-skills="go react postgres rest-api websockets llm auth feature-design">
+        <div class="work-meta"><span>Personal project</span><span>2026</span></div>
+        <h3>KanbanHub</h3>
+        <div class="what">Full-stack project management platform</div>
+        <p data-only="product">Kanban boards, sprint tracking, team chat and budgets in one tool, scoped around how delivery teams actually work.</p>
+        <p data-only="eng">Go (Chi, pgx) and PostgreSQL with RBAC, multi-tenancy, WebSocket chat and Cloudflare R2, plus a React 19 and TypeScript front end with an AI assistant.</p>
+        <p data-only="ops">The delivery mechanics I run every day, built as software: kanban flow, sprint tracking, budget visibility and role-based access.</p>
+        <div class="tags"><span class="tag">Go</span><span class="tag">PostgreSQL</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">WebSockets</span></div>
+        <div class="work-foot">
+          <a class="work-link stretched" href="work/kanbanhub.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <!-- TODO: paste KanbanHub links (they stay hidden while href="#") -->
+          <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> Live demo</a>
+          <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" id="work-pennywise" style="--o-product:2;--o-eng:3;--o-ops:5" data-feature="product"
+        data-title="PennyWise" data-context="Project · 2026 · live"
+        data-skills="react react-native python postgres rest-api auth feature-design product-ownership">
+        <div class="work-meta"><span>Personal project</span><span class="live">● live · 2026</span></div>
+        <h3>PennyWise</h3>
+        <div class="what">Shared budgeting app for web and mobile</div>
+        <p data-only="product">A Netflix-style shared account model: several people budget under one primary account and see the same numbers in real time.</p>
+        <p data-only="eng">React and React Native apps on a Python API and Supabase, secured with JWT, RBAC and Postgres row-level security.</p>
+        <p data-only="ops">Shipped and running: web on Vercel, API on Render, data on Supabase, with documented API endpoints.</p>
+        <div class="tags"><span class="tag">React Native</span><span class="tag">React</span><span class="tag">Python</span><span class="tag">Supabase</span><span class="tag">RLS</span></div>
+        <div class="work-foot">
+          <a class="work-link stretched" href="work/pennywise.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="work-ext" href="https://pennywise-rav.vercel.app" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> Live app</a>
+          <a class="work-ext" href="https://mybudgetapp-e7yy.onrender.com/docs" target="_blank" rel="noopener"><i class="fas fa-book-open" aria-hidden="true"></i> API docs</a>
+          <!-- TODO: paste PennyWise GitHub link -->
+          <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" id="work-skillradar" style="--o-product:3;--o-eng:4;--o-ops:4"
+        data-title="SkillRadar" data-context="Capstone · 2024"
+        data-skills="python ml forecasting dashboards data-analysis">
+        <div class="work-meta"><span>Capstone project</span><span>2024</span></div>
+        <h3>SkillRadar</h3>
+        <div class="what">Tech-skills market intelligence</div>
+        <p data-only="product">Answers a real planning question: which tech skills are in demand, what they pay, and where the market is heading to 2028.</p>
+        <p data-only="eng">Pulls live data from 9 public APIs for 65 skills; Holt-Winters forecasts and a RandomForest salary model (R² 0.87) behind Streamlit and Flask dashboards.</p>
+        <p data-only="ops">One pipeline from 9 live data sources to two dashboards, with forecasts that put 80% confidence intervals on every projection.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">statsmodels</span><span class="tag">Streamlit</span><span class="tag">Plotly</span></div>
+        <div class="work-foot">
+          <a class="work-link stretched" href="work/skillradar.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="work-ext" href="https://github.com/ravsain/Analysis-on-Emerging-Technology-Skills-and-Trends" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+          <!-- TODO: paste SkillRadar live dashboard link -->
+          <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> Live dashboard</a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" id="work-sauce" style="--o-product:5;--o-eng:5;--o-ops:2" data-feature="ops"
+        data-title="Sauce and Spoons" data-context="Capstone · Oct 2024"
+        data-skills="planning risk quality stakeholders requirements reporting">
+        <div class="work-meta"><span>Capstone simulation</span><span>Oct 2024</span></div>
+        <h3>Sauce and Spoons</h3>
+        <div class="what">Restaurant operations pilot: tabletop menu tablets</div>
+        <p data-only="product">Scoped a tablet-ordering pilot to speed up service and guest turnover, with SMART goals and a stakeholder power grid.</p>
+        <p data-only="eng">The requirements side of a hardware rollout: scope, quality standards and execution benchmarks for tabletop menu tablets.</p>
+        <p data-only="ops">Full project lifecycle: Gantt plan, three-point estimates, risk strategies, quality standards and an impact report on revenue and satisfaction.</p>
+        <div class="tags"><span class="tag">Project planning</span><span class="tag">Risk</span><span class="tag">Gantt</span><span class="tag">SMART goals</span></div>
+        <div class="work-foot">
+          <a class="work-link stretched" href="work/sauce-and-spoons.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <!-- TODO: paste a link to the project report or slides -->
+          <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> Report</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SKILLS EXPLORER ─────────────────────────────────── -->
+<section class="section" id="skills">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Skills, with proof</span>
+      <h2>Pick a skill. See where I used it.</h2>
+      <p>No percentage bars. Every skill here links to a real job or project on this page.</p>
+    </div>
+
+    <div class="explorer">
+      <div class="skill-groups reveal">
+        <div class="skill-group" data-lens="product">
+          <h3>Product <small>your view</small></h3>
+          <div class="skill-list">
+            <button type="button" class="skill" data-skill="product-ownership" aria-pressed="false">Product ownership</button>
+            <button type="button" class="skill" data-skill="requirements" aria-pressed="false">Requirements &amp; PRDs</button>
+            <button type="button" class="skill" data-skill="backlog" aria-pressed="false">Backlog grooming</button>
+            <button type="button" class="skill" data-skill="stakeholders" aria-pressed="false">Stakeholder management</button>
+            <button type="button" class="skill" data-skill="feature-design" aria-pressed="false">Feature design</button>
+          </div>
+        </div>
+        <div class="skill-group" data-lens="eng">
+          <h3>Engineering <small>your view</small></h3>
+          <div class="skill-list">
+            <button type="button" class="skill" data-skill="go" aria-pressed="false">Go</button>
+            <button type="button" class="skill" data-skill="python" aria-pressed="false">Python</button>
+            <button type="button" class="skill" data-skill="react" aria-pressed="false">React / TypeScript</button>
+            <button type="button" class="skill" data-skill="react-native" aria-pressed="false">React Native</button>
+            <button type="button" class="skill" data-skill="postgres" aria-pressed="false">PostgreSQL</button>
+            <button type="button" class="skill" data-skill="rest-api" aria-pressed="false">REST APIs</button>
+            <button type="button" class="skill" data-skill="websockets" aria-pressed="false">WebSockets</button>
+            <button type="button" class="skill" data-skill="llm" aria-pressed="false">LLM agents</button>
+            <button type="button" class="skill" data-skill="auth" aria-pressed="false">Auth &amp; RBAC</button>
+          </div>
+        </div>
+        <div class="skill-group" data-lens="ops">
+          <h3>Operations <small>your view</small></h3>
+          <div class="skill-list">
+            <button type="button" class="skill" data-skill="scrumban" aria-pressed="false">Scrumban / Agile</button>
+            <button type="button" class="skill" data-skill="process" aria-pressed="false">Process improvement</button>
+            <button type="button" class="skill" data-skill="automation" aria-pressed="false">Workflow automation</button>
+            <button type="button" class="skill" data-skill="planning" aria-pressed="false">Project planning</button>
+            <button type="button" class="skill" data-skill="risk" aria-pressed="false">Risk management</button>
+            <button type="button" class="skill" data-skill="quality" aria-pressed="false">Quality management</button>
+            <button type="button" class="skill" data-skill="coordination" aria-pressed="false">Cross-team coordination</button>
+            <button type="button" class="skill" data-skill="mentoring" aria-pressed="false">Mentoring</button>
+            <button type="button" class="skill" data-skill="reporting" aria-pressed="false">Reporting</button>
+          </div>
+        </div>
+        <div class="skill-group" data-lens="data">
+          <h3>Data &amp; AI</h3>
+          <div class="skill-list">
+            <button type="button" class="skill" data-skill="sql" aria-pressed="false">SQL</button>
+            <button type="button" class="skill" data-skill="pandas" aria-pressed="false">Pandas / NumPy</button>
+            <button type="button" class="skill" data-skill="data-analysis" aria-pressed="false">Data analysis</button>
+            <button type="button" class="skill" data-skill="dashboards" aria-pressed="false">Dashboards</button>
+            <button type="button" class="skill" data-skill="ml" aria-pressed="false">Machine learning</button>
+            <button type="button" class="skill" data-skill="forecasting" aria-pressed="false">Forecasting</button>
+            <button type="button" class="skill" data-skill="ai-eval" aria-pressed="false">AI model evaluation</button>
+          </div>
+        </div>
+        <div class="skill-group" data-lens="quality">
+          <h3>Quality &amp; testing</h3>
+          <div class="skill-list">
+            <button type="button" class="skill" data-skill="playwright" aria-pressed="false">Playwright</button>
+            <button type="button" class="skill" data-skill="selenium" aria-pressed="false">Selenium</button>
+            <button type="button" class="skill" data-skill="api-testing" aria-pressed="false">API testing</button>
+            <button type="button" class="skill" data-skill="regression" aria-pressed="false">Regression testing</button>
+            <button type="button" class="skill" data-skill="test-design" aria-pressed="false">Test design</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="proof reveal" id="proof" aria-live="polite">
+        <div class="proof-empty"><b>Pick a skill</b>Each one links to where I actually used it: a job above or a case study. Matching items light up on the page.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GITHUB (live) ───────────────────────────────────── -->
+<section class="section" id="github">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">On GitHub</span>
+      <h2>Recently updated repositories.</h2>
+      <p>Loaded live from GitHub each time you visit, so it's always current.</p>
+    </div>
+    <div class="gh-grid" id="gh-grid">
+      <div class="gh-card gh-skel" aria-hidden="true"></div>
+      <div class="gh-card gh-skel" aria-hidden="true"></div>
+      <div class="gh-card gh-skel" aria-hidden="true"></div>
+    </div>
+    <div class="gh-foot">
+      <span id="gh-status" class="mono">Loading from api.github.com…</span>
+      <a class="btn btn-ghost btn-sm" href="https://github.com/ravsain" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> github.com/ravsain</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ───────────────────────────────────────── -->
+<section class="section" id="education" style="padding-top:24px">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Education &amp; more</span>
+      <h2 class="sr-only">Education, certifications and achievements</h2>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu"><i class="fas fa-graduation-cap" aria-hidden="true"></i><b>MBA, Business Analytics</b><span>GLA University, Mathura</span><small>2024</small></div>
+      <div class="edu"><i class="fas fa-building-columns" aria-hidden="true"></i><b>BBA</b><span>Sanskriti University, Mathura</span><small>2020</small></div>
+      <div class="edu"><i class="fas fa-certificate" aria-hidden="true"></i><b>Certifications</b><span>Data Analyst (Excel, SQL, Python) · Project Management (Agile)</span></div>
+      <div class="edu"><i class="fas fa-medal" aria-hidden="true"></i><b>Black Belt Champion</b><span>International martial arts tournament · event anchor</span><small>2018</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CONTACT ─────────────────────────────────────────── -->
+<section class="section" id="contact">
+  <div class="wrap contact">
+    <div class="reveal">
+      <span class="eyebrow">Contact</span>
+      <h2 style="margin-top:12px">Let's build something <em>that ships.</em></h2>
+      <p>I'm looking for product, engineering and operations roles where business and engineering meet. Email is the fastest way to reach me.</p>
+      <div class="contact-links">
+        <div class="clink">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <div><span>email</span><a class="stretched" href="mailto:ravsainz@gmail.com"><b>ravsainz@gmail.com</b></a></div>
+          <button type="button" class="copy" data-copy="ravsainz@gmail.com" aria-label="Copy email address">Copy</button>
+        </div>
+        <a class="clink" href="tel:+917023577505"><i class="fas fa-phone" aria-hidden="true"></i><div><span>phone</span><b>+91 70235 77505</b></div></a>
+        <a class="clink" href="https://www.linkedin.com/in/r-p-s" target="_blank" rel="noopener"><i class="fab fa-linkedin-in" aria-hidden="true"></i><div><span>linkedin</span><b>linkedin.com/in/r-p-s</b></div></a>
+        <a class="clink" href="https://github.com/ravsain" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i><div><span>github</span><b>github.com/ravsain</b></div></a>
+      </div>
+    </div>
+
+    <div class="cv-box reveal">
+      <h3>Download a resume</h3>
+      <p>Two one-page versions, built to read cleanly in applicant tracking systems. The one for your view is highlighted.</p>
+      <a class="cv-item" data-cv-kind="dev" href="resume/Ravender_Pratap_Singh_Resume.pdf" download>
+        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+        <div><b>Product Analyst &amp; Developer</b><span>Product, engineering and QA roles</span></div>
+        <i class="fas fa-download dl" aria-hidden="true"></i>
+      </a>
+      <a class="cv-item" data-cv-kind="ops" href="operation-resume/Ravender_Pratap_Singh_Operations_Resume.pdf" download>
+        <i class="fas fa-file-pdf" aria-hidden="true"></i>
+        <div><b>Operations, Program Mgmt &amp; Product Owner</b><span>Operations, program and delivery roles</span></div>
+        <i class="fas fa-download dl" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span data-year>2026</span> Ravender Pratap Singh</span>
+    <span>Press <kbd>~</kbd> to open the terminal</span>
+    <div class="footer-links">
+      <button type="button" class="term-open" data-terminal aria-label="Open terminal">&gt;_ terminal</button>
+      <a href="mailto:ravsainz@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/r-p-s" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="https://github.com/ravsain" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

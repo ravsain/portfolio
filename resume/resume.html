@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ravender Pratap Singh - Resume - Product Analyst, Product Owner, Software Developer</title>
+<meta name="author" content="Ravender Pratap Singh">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /*
+    Ravender Pratap Singh — MASTER resume (product + engineering + operations).
+    This is the resume the portfolio offers for download.
+    Edit the text below, then rebuild the PDF with:  bash build.sh
+
+    ATS / AI-screening rules this file follows — keep them when editing:
+      1. Single column. No side-by-side text columns or tables.
+      2. Standard section titles (Summary, Experience, Projects, Skills, Education, Certifications).
+      3. Decoration (bullets, cursor, heading marks) is drawn with CSS shapes, never typed
+         characters, so the PDF text layer contains only real words.
+      4. No position:absolute/relative on text, so the PDF text stays in reading order.
+      5. Keywords written the way job posts write them, acronyms spelled out once.
+      6. No hidden or white-on-white keyword text — AI screeners flag it.
+  */
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --ink:      #14141f;
+    --ink-2:    #34344a;
+    --muted:    #66667f;
+    --line:     #e3e3ee;
+    --chip-bg:  #f4f4fa;
+    --mint:     #0f9f7f;
+    --mint-lt:  #5ee7c2;
+    --lav:      #6d4fe0;
+    --lav-lt:   #a78bfa;
+    --night:    #0b0b17;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #fff; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 8.55pt;
+    line-height: 1.34;
+    color: var(--ink-2);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .when, .chips span, .contact, .tag-line, .stack-line, h2, .skills dt, .proj-stack {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-variant-ligatures: none;
+  }
+  a { color: inherit; text-decoration: none; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  .page { width: 210mm; margin: 0 auto; }
+
+  /* ── HEADER ─────────────────────────────── */
+  header {
+    background-color: var(--night);
+    background-image:
+      radial-gradient(ellipse 55% 140% at 95% 0%, rgba(167,139,250,.30), transparent 60%),
+      radial-gradient(ellipse 45% 140% at 68% 130%, rgba(94,231,194,.16), transparent 60%);
+    color: #e4e4f0;
+    padding: 6mm 13mm 5mm;
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 23pt; line-height: 1.02; letter-spacing: -.01em; color: #fff;
+  }
+  h1 .last { color: var(--mint-lt); }
+  h1::after {               /* terminal cursor: a drawn block, not a character */
+    content: ""; display: inline-block; width: .42em; height: .78em;
+    margin-left: .12em; vertical-align: -.04em; background: var(--lav-lt); border-radius: 1px;
+  }
+  .tag-line { font-size: 8.6pt; font-weight: 500; color: var(--mint-lt); margin-top: 1.6mm; display: flex; align-items: center; gap: 1.8mm; }
+  .tag-line::before {
+    content: ""; width: 1.5mm; height: 1.5mm; border-right: 1.5px solid var(--lav-lt); border-top: 1.5px solid var(--lav-lt);
+    transform: rotate(45deg); margin-right: .4mm;
+  }
+  .stack-line { margin-top: .8mm; font-size: 7.3pt; color: #a9a9c4; }
+  .stack-line b { color: var(--lav-lt); font-weight: 500; }
+  .contact { list-style: none; text-align: right; font-size: 7.4pt; line-height: 1.62; color: #d4d4e6; }
+  .contact li { white-space: nowrap; }
+
+  /* ── BODY ───────────────────────────────── */
+  main { padding: 4mm 13mm 0; }
+  section { margin-top: 2.7mm; }
+  section:first-child { margin-top: 0; }
+  h2 {
+    display: flex; align-items: center; gap: 2.2mm;
+    font-weight: 600; font-size: 8pt; text-transform: uppercase; letter-spacing: .09em;
+    color: var(--ink); margin-bottom: 1.4mm;
+  }
+  h2::before { content: ""; width: 1.6mm; height: 3mm; background: var(--mint); border-radius: .5px; }
+  h2::after  { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .summary { font-size: 8.6pt; line-height: 1.42; }
+
+  .entry { margin-top: 2.2mm; break-inside: avoid; }
+  .entry:first-of-type { margin-top: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .role { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 9.6pt; color: var(--ink); }
+  .role .sep { color: var(--muted); font-weight: 500; }
+  .role .org { color: var(--lav); }
+  .role .note { font-family: 'Inter', sans-serif; font-size: 7.7pt; font-weight: 400; color: var(--muted); }
+  .when { font-size: 7.3pt; color: var(--muted); white-space: nowrap; }
+  .proj-stack { font-size: 7.1pt; color: var(--mint); font-weight: 500; margin-left: 1.2mm; }
+  .proj-stack a { color: var(--lav); }
+
+  ul.pts { list-style: none; margin-top: .6mm; }
+  ul.pts li { padding-left: 3.4mm; text-indent: -3.4mm; margin-top: .35mm; }
+  ul.pts li::before {
+    content: ""; display: inline-block; width: 1.5mm; height: 1.7mm; margin-right: 1.9mm;
+    background: var(--mint); clip-path: polygon(0 0, 100% 50%, 0 100%); vertical-align: .05em;
+  }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 1mm; margin-top: .9mm; }
+  .chips span {
+    font-size: 6.6pt; color: var(--ink-2);
+    background: var(--chip-bg); border: 1px solid var(--line); border-radius: 2.5px; padding: 0 1.3mm;
+  }
+
+  .skills { display: grid; grid-template-columns: 23mm 1fr; row-gap: .7mm; column-gap: 3mm; }
+  .skills dt { font-size: 7.2pt; color: var(--mint); font-weight: 500; padding-top: .25mm; }
+
+  .edu-item { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; margin-top: .5mm; }
+  .edu-item:first-of-type { margin-top: 0; }
+  .edu-item b { color: var(--ink); font-weight: 600; }
+  .edu-item .where { color: var(--muted); }
+  .alt ul.pts li::before { background: var(--lav); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <h1>Ravender <span class="last">Pratap Singh</span></h1>
+      <div class="tag-line">Product Analyst | Product Owner | Software Developer</div>
+      <div class="stack-line"><b>Agile Delivery</b> · <b>Operations</b> · <b>Go</b> · <b>Python</b> · <b>React/TS</b> · <b>SQL</b> · Playwright</div>
+    </div>
+    <ul class="contact">
+      <li><a href="mailto:ravsainz@gmail.com">ravsainz@gmail.com</a></li>
+      <li><a href="tel:+917023577505">+91 70235 77505</a> · Gurugram, India</li>
+      <li><a href="https://ravsain.github.io/portfolio/">ravsain.github.io/portfolio</a></li>
+      <li><a href="https://github.com/ravsain">github.com/ravsain</a></li>
+      <li><a href="https://www.linkedin.com/in/r-p-s">linkedin.com/in/r-p-s</a></li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">
+        Product Analyst and Product Owner who also builds software. <strong>MBA in Business Analytics</strong> with <strong>3+ years</strong> across
+        product management, software development, QA automation, data analysis and delivery operations. Led a from-scratch
+        <strong>Point of Sale (POS) redesign in Go</strong>, integrated an <strong>in-house payment gateway</strong>, deployed a
+        <strong>Python LLM agent</strong> to production and moved a team to <strong>Agile Scrumban</strong>. Skilled in requirements,
+        PRDs, backlog prioritization, stakeholder management, SQL and test automation.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Product &amp; Quality Analyst (Automation) <span class="sep">|</span> <span class="org">Vervebot</span></div>
+          <div class="when">Gurugram · Apr 2025 – Present</div>
+        </div>
+        <ul class="pts">
+          <li>Led the from-scratch <strong>POS redesign</strong> on a scalable <strong>Go (Golang)</strong> backend, owning requirements and backlog priorities.</li>
+          <li>Deployed a <strong>Python LLM agent</strong> in the POS for real-time merchant sales insights and automated support queries.</li>
+          <li>Drove the <strong>in-house payment gateway</strong> integration, translating revenue goals into requirements, PRDs and user stories.</li>
+          <li>Moved the development team to <strong>Agile Scrumban</strong>; run standups, backlog grooming and sprint tracking in Jira and Trello.</li>
+          <li>Automated critical workflows with <strong>Playwright</strong> and <strong>API tests</strong>, cutting regression time and catching bugs before release.</li>
+        </ul>
+        <div class="chips"><span>Product Ownership</span><span>Stakeholder Management</span><span>Go</span><span>Python</span><span>LLM Agents</span><span>Playwright</span><span>API Automation</span><span>Jira</span><span>Scrumban</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Data Analyst <span class="sep">|</span> <span class="org">GlobalLogic Inc.</span> <span class="note">· Client: Google</span></div>
+          <div class="when">Gurugram · Dec 2024 – Apr 2025</div>
+        </div>
+        <ul class="pts">
+          <li>Evaluated and fine-tuned <strong>AI model performance</strong> with Google client teams, ensuring high data quality and system reliability.</li>
+          <li>Performed <strong>data analysis</strong> with <strong>SQL, Pandas and NumPy</strong> and built dashboards that turned findings into actionable insights.</li>
+          <li><strong>Mentored team members</strong> and conducted performance evaluations to build skills across the team.</li>
+        </ul>
+        <div class="chips"><span>SQL</span><span>Python</span><span>Pandas</span><span>NumPy</span><span>Data Analysis</span><span>Dashboards</span><span>AI Model Evaluation</span><span>Mentoring</span></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Quality Analyst <span class="sep">|</span> <span class="org">Filo Edtech Inc.</span></div>
+          <div class="when">Gurugram · Jun 2022 – Jul 2023</div>
+        </div>
+        <ul class="pts">
+          <li><strong>Automated 30% of test scenarios with Selenium</strong>, improving test cycle efficiency by <strong>20%</strong> and reducing manual effort.</li>
+          <li>Designed and executed test cases for a high-traffic e-learning platform, keeping critical production defects to a minimum.</li>
+          <li>Ran functional, integration, regression and performance testing; triaged defects with product and engineering teams.</li>
+        </ul>
+        <div class="chips"><span>Selenium</span><span>Test Automation</span><span>Test Case Design</span><span>Regression Testing</span><span>Performance Testing</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Society Vehicle &amp; Parking OS <span class="note">· Multi-society gate and parking platform</span><span class="proj-stack">FastAPI · PostgreSQL · Redis · React</span></div>
+          <div class="when">Personal · 2026</div>
+        </div>
+        <ul class="pts">
+          <li>Built gate entry/exit, visitor passes, vehicle search and alerts with admin, guard and resident roles across multiple societies.</li>
+          <li>Live parking occupancy via <strong>Redis</strong> counters, pub/sub and <strong>WebSockets</strong>; camera plate <strong>OCR</strong>; Docker for cloud or self-hosting.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">KanbanHub <span class="note">· Full-stack project management platform</span><span class="proj-stack">Go · PostgreSQL · React · TypeScript</span></div>
+          <div class="when">Personal · 2026</div>
+        </div>
+        <ul class="pts">
+          <li>Kanban boards, sprint tracking, <strong>WebSocket</strong> chat and budgeting on a <strong>Go</strong> REST API with RBAC and multi-tenancy.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">PennyWise <span class="note">· Shared budgeting app, web + mobile</span><span class="proj-stack"><a href="https://pennywise-rav.vercel.app">pennywise-rav.vercel.app</a></span></div>
+          <div class="when">Personal · 2026</div>
+        </div>
+        <ul class="pts">
+          <li>Netflix-style <strong>shared accounts</strong> on React and React Native with a <strong>Python API</strong> and <strong>Supabase</strong>; JWT, RBAC and row-level security.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">SkillRadar <span class="note">· Tech-skills market intelligence</span><span class="proj-stack">Python · scikit-learn · Streamlit</span></div>
+          <div class="when">Capstone · 2024</div>
+        </div>
+        <ul class="pts">
+          <li>Tracks <strong>65 skills from 9 public APIs</strong>; Holt-Winters forecasts to 2028 and a RandomForest salary model (<strong>R² 0.87</strong>) in dashboards.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Sauce and Spoons <span class="note">· Restaurant operations pilot (project management)</span></div>
+          <div class="when">Capstone · Oct 2024</div>
+        </div>
+        <ul class="pts">
+          <li>Planned the pilot with <strong>SMART goals</strong>, stakeholder mapping, <strong>Gantt</strong> plan, three-point estimates and <strong>risk management</strong>.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Product</dt>
+        <dd>Product Ownership, Product Analysis, Business Analysis, Requirements Gathering, Product Requirements Documents (PRDs), User Stories, Backlog Prioritization, Roadmap Planning, Stakeholder Management</dd>
+        <dt>Delivery &amp; Ops</dt>
+        <dd>Agile, Scrum, Scrumban, Kanban, Sprint Planning, SDLC, Process Improvement, Workflow Automation, Risk Management, Cross-functional Coordination, Team Mentoring</dd>
+        <dt>Engineering</dt>
+        <dd>Go (Golang), Python, FastAPI, JavaScript, TypeScript, React, React Native, Java, SQL, REST APIs</dd>
+        <dt>Data &amp; AI</dt>
+        <dd>Data Analysis, PostgreSQL, MySQL, Pandas, NumPy, scikit-learn, LLM Agents, Excel, Tableau, IBM Cognos</dd>
+        <dt>Testing &amp; QA</dt>
+        <dd>Playwright, Selenium, Postman, Test Automation, API, Integration, Regression &amp; Performance Testing</dd>
+        <dt>Tools</dt>
+        <dd>Jira, Trello, Git, GitHub, Docker, Redis, WebSockets, Supabase, Flask, Streamlit, Vercel</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item"><span><b>MBA, Business Analytics</b> <span class="where">· GLA University, Mathura</span></span><span class="when">2024</span></div>
+      <div class="edu-item"><span><b>BBA (Bachelor of Business Administration)</b> <span class="where">· Sanskriti University, Mathura</span></span><span class="when">2020</span></div>
+    </section>
+
+    <section class="alt">
+      <h2>Certifications &amp; Achievements</h2>
+      <ul class="pts">
+        <li><strong>Data Analyst</strong> certification (Excel, SQL, Python) · <strong>Project Management</strong> certification (Agile, lifecycle planning)</li>
+        <li><strong>Black Belt Champion</strong>, international martial arts tournament (Nov 2018) · Anchor for school and college annual day events</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>

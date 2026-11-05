@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ravender Pratap Singh - Resume - Operations, Program Management, Product Owner</title>
+<meta name="author" content="Ravender Pratap Singh">
+<meta name="keywords" content="Operations Manager, Program Manager, Product Owner, Project Manager, Business Operations, Process Improvement, Workflow Automation, Project Management, Agile, Scrumban, Stakeholder Management, SQL, Excel, Dashboards">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  /*
+    Ravender Pratap Singh — OPERATIONS resume source.
+    Edit the text below, then rebuild the PDF with:  bash build.sh
+
+    ATS / AI-screening rules this file follows — keep them when editing:
+      1. Single column. No side-by-side text columns or tables.
+      2. Standard section titles (Summary, Experience, Projects, Skills, Education, Certifications).
+      3. Decoration (bullets, heading marks) is drawn with CSS shapes, never typed characters.
+      4. No position:absolute/relative on text, so the PDF text stays in reading order.
+      5. Keywords written the way operations job posts write them.
+      6. No hidden or white-on-white keyword text — AI screeners flag it.
+  */
+  @page { size: A4; margin: 0; }
+
+  :root {
+    --ink:     #14141f;
+    --ink-2:   #34344a;
+    --muted:   #66667f;
+    --line:    #e3e3ee;
+    --tint:    #f5f5fa;
+    --mint:    #0f9f7f;
+    --mint-lt: #5ee7c2;
+    --lav:     #6d4fe0;
+    --lav-lt:  #a78bfa;
+    --night:   #0b0b17;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #fff; }
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 8.8pt;
+    line-height: 1.35;
+    color: var(--ink-2);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  .page { width: 210mm; margin: 0 auto; }
+
+  /* ── HEADER ─────────────────────────────── */
+  header {
+    background-color: var(--night);
+    background-image:
+      radial-gradient(ellipse 55% 140% at 95% 0%, rgba(167,139,250,.26), transparent 60%),
+      radial-gradient(ellipse 45% 140% at 68% 130%, rgba(94,231,194,.14), transparent 60%);
+    color: #e4e4f0;
+    padding: 7mm 13mm 6mm;
+    display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm;
+  }
+  h1 {
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700;
+    font-size: 24pt; line-height: 1.02; letter-spacing: -.01em; color: #fff;
+  }
+  h1 .last { color: var(--mint-lt); }
+  .tag-line { font-size: 10pt; font-weight: 600; color: var(--mint-lt); margin-top: 2mm; letter-spacing: .01em; }
+  .focus-line { margin-top: 1mm; font-size: 7.9pt; color: #b0b0c8; }
+  .contact { list-style: none; text-align: right; font-size: 7.9pt; line-height: 1.62; color: #d4d4e6; }
+  .contact li { white-space: nowrap; }
+
+  /* ── BODY ───────────────────────────────── */
+  main { padding: 4.8mm 13mm 0; }
+  section { margin-top: 3mm; }
+  section:first-child { margin-top: 0; }
+  h2 {
+    display: flex; align-items: center; gap: 2.2mm;
+    font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 9pt;
+    text-transform: uppercase; letter-spacing: .1em; color: var(--ink); margin-bottom: 1.6mm;
+  }
+  h2::before { content: ""; width: 1.6mm; height: 3.2mm; background: var(--mint); border-radius: .5px; }
+  h2::after  { content: ""; flex: 1; height: 1px; background: var(--line); }
+
+  .summary { font-size: 8.9pt; line-height: 1.46; }
+
+  .entry { margin-top: 2.6mm; break-inside: avoid; }
+  .entry:first-of-type { margin-top: 0; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .role { font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 10pt; color: var(--ink); }
+  .role .sep { color: var(--muted); font-weight: 500; }
+  .role .org { color: var(--lav); }
+  .role .note { font-family: 'Inter', sans-serif; font-size: 8pt; font-weight: 400; color: var(--muted); }
+  .when { font-size: 7.9pt; color: var(--muted); white-space: nowrap; font-variant-numeric: tabular-nums; }
+
+  ul.pts { list-style: none; margin-top: .7mm; }
+  ul.pts li { padding-left: 3.4mm; text-indent: -3.4mm; margin-top: .4mm; }
+  ul.pts li::before {
+    content: ""; display: inline-block; width: 1.3mm; height: 1.3mm; margin-right: 2.1mm;
+    background: var(--mint); border-radius: 50%; vertical-align: .12em;
+  }
+
+  .areas {
+    margin-top: 1.1mm; padding: .7mm 2.2mm; background: var(--tint); border-left: 2px solid var(--lav);
+    border-radius: 0 2px 2px 0; font-size: 7.7pt; color: var(--ink-2);
+  }
+  .areas b { color: var(--lav); font-weight: 600; margin-right: 1mm; }
+
+  .skills { display: grid; grid-template-columns: 34mm 1fr; row-gap: .9mm; column-gap: 3mm; }
+  .skills dt { font-weight: 600; color: var(--mint); font-size: 8.2pt; }
+
+  .edu-item { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; margin-top: .7mm; }
+  .edu-item:first-of-type { margin-top: 0; }
+  .edu-item b { color: var(--ink); font-weight: 600; }
+  .edu-item .where { color: var(--muted); }
+  .alt ul.pts li::before { background: var(--lav); }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div>
+      <h1>Ravender <span class="last">Pratap Singh</span></h1>
+      <div class="tag-line">Operations &amp; Program Management | Product Owner</div>
+      <div class="focus-line">Program Delivery · Product Ownership · Process Improvement · Agile/Scrumban</div>
+    </div>
+    <ul class="contact">
+      <li><a href="mailto:ravsainz@gmail.com">ravsainz@gmail.com</a></li>
+      <li><a href="tel:+917023577505">+91 70235 77505</a> · Gurugram, India</li>
+      <li><a href="https://www.linkedin.com/in/r-p-s">linkedin.com/in/r-p-s</a></li>
+      <li><a href="https://ravsain.github.io/portfolio/">ravsain.github.io/portfolio</a></li>
+    </ul>
+  </header>
+
+  <main>
+
+    <section>
+      <h2>Summary</h2>
+      <p class="summary">
+        Operations and program professional with product-owner experience, an <strong>MBA in Business Analytics</strong> and <strong>3+ years</strong>
+        leading cross-functional delivery across product, quality and data teams. Led a from-scratch <strong>Point of Sale (POS) redesign</strong>,
+        coordinated a <strong>payment gateway rollout</strong>, moved a team to <strong>Scrumban</strong> and
+        <strong>automated 30% of testing</strong> for <strong>20% faster cycles</strong>. Strong in backlog prioritisation,
+        stakeholder management, risk planning and process improvement.
+      </p>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Product &amp; Quality Analyst (Automation) <span class="sep">|</span> <span class="org">Vervebot</span></div>
+          <div class="when">Gurugram · Apr 2025 – Present</div>
+        </div>
+        <ul class="pts">
+          <li>Led the <strong>POS redesign program</strong> end to end, owning requirements, backlog priorities and delivery across teams.</li>
+          <li>Moved the development team to <strong>Scrumban</strong>, running standups, backlog grooming and sprint tracking in Jira and Trello.</li>
+          <li>Coordinated the <strong>in-house payment gateway integration</strong> across business and engineering, aligned to revenue goals.</li>
+          <li>Rolled out an <strong>AI agent</strong> in the POS that automates merchant support queries and delivers real-time sales insights.</li>
+          <li><strong>Automated critical workflows</strong> and regression checks, cutting regression time and catching issues before release.</li>
+          <li>Translated client requirements into specs, PRDs and user stories each sprint, keeping business and engineering aligned.</li>
+        </ul>
+        <div class="areas"><b>Key areas</b> Program Delivery · Product Ownership · Scrumban · Payments Integration · Process Automation · Stakeholder Management</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Data Analyst <span class="sep">|</span> <span class="org">GlobalLogic Inc.</span> <span class="note">· Client: Google</span></div>
+          <div class="when">Gurugram · Dec 2024 – Apr 2025</div>
+        </div>
+        <ul class="pts">
+          <li>Safeguarded <strong>data quality and reliability</strong> in AI model evaluation work for Google client teams.</li>
+          <li>Analysed data with <strong>SQL, Pandas and NumPy</strong> and built dashboards that turned findings into actionable insights.</li>
+          <li><strong>Mentored team members</strong> and ran performance evaluations to build skills across the team.</li>
+        </ul>
+        <div class="areas"><b>Key areas</b> Data Quality · Reporting &amp; Dashboards · Team Mentoring · Performance Evaluation</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Quality Analyst <span class="sep">|</span> <span class="org">Filo Edtech Inc.</span></div>
+          <div class="when">Gurugram · Jun 2022 – Jul 2023</div>
+        </div>
+        <ul class="pts">
+          <li><strong>Automated 30% of test scenarios</strong>, improving test cycle efficiency by <strong>20%</strong> and reducing manual effort.</li>
+          <li>Kept critical production defects to a minimum on a <strong>high-traffic e-learning platform</strong> through structured test design.</li>
+          <li>Worked with cross-functional teams to identify, document and resolve defects, ensuring high-quality releases.</li>
+        </ul>
+        <div class="areas"><b>Key areas</b> Quality Assurance · Process Efficiency · Cross-functional Coordination · Selenium</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">Sauce and Spoons <span class="note">· Restaurant operations pilot: tabletop menu tablets</span></div>
+          <div class="when">Capstone · Oct 2024</div>
+        </div>
+        <ul class="pts">
+          <li>Defined scope, a stakeholder power grid and <strong>SMART goals</strong> for a tablet pilot to speed up service and guest turnover.</li>
+          <li>Planned delivery with <strong>Gantt schedules</strong>, three-point time estimates and <strong>risk management</strong> strategies.</li>
+          <li>Set quality standards and benchmarks; delivered closing and impact reports on revenue and customer satisfaction.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">SkillRadar <span class="note">· Tech-skills market intelligence</span></div>
+          <div class="when">Capstone · 2024</div>
+        </div>
+        <ul class="pts">
+          <li>Analytics pipeline tracking <strong>65 skills from 9 public APIs</strong>, with demand forecasts to 2028 and interactive dashboards.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <div class="role">KanbanHub <span class="note">· Project management platform</span></div>
+          <div class="when">Personal · 2026</div>
+        </div>
+        <ul class="pts">
+          <li>Built a team tool with kanban boards, <strong>sprint tracking</strong>, team chat, <strong>budgeting</strong> and role-based access control.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Program &amp; Product</dt>
+        <dd>Program Management, Product Ownership, Roadmap Planning, Backlog Prioritisation, Sprint &amp; Release Planning, Requirements Gathering, PRDs, User Stories, Agile, Scrum, Scrumban, Kanban</dd>
+        <dt>Operations &amp; People</dt>
+        <dd>Process Improvement, Workflow Automation, Risk Management, Quality Management, Gantt Planning, Stakeholder Management, Cross-functional Coordination, Team Leadership, Mentoring</dd>
+        <dt>Data &amp; Reporting</dt>
+        <dd>SQL (PostgreSQL, MySQL), Excel, Python (Pandas, NumPy), Tableau, IBM Cognos, Dashboards</dd>
+        <dt>Tools &amp; Tech</dt>
+        <dd>Jira, Trello, Postman, Selenium, Playwright, GitHub, Go, React, API Automation, LLM Agents</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="edu-item"><span><b>MBA, Business Analytics</b> <span class="where">· GLA University, Mathura</span></span><span class="when">2024</span></div>
+      <div class="edu-item"><span><b>BBA (Bachelor of Business Administration)</b> <span class="where">· Sanskriti University, Mathura</span></span><span class="when">2020</span></div>
+    </section>
+
+    <section class="alt">
+      <h2>Certifications &amp; Achievements</h2>
+      <ul class="pts">
+        <li><strong>Project Management</strong> certification (Agile, lifecycle planning) · <strong>Data Analyst</strong> certification (Excel, SQL, Python)</li>
+        <li><strong>Black Belt Champion</strong>, international martial arts tournament (Nov 2018) · Anchor for school and college annual day events</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+</body>
+</html>
