@@ -29,10 +29,12 @@ jobs:
           set -e
           rm -rf public_site
           mkdir -p public_site
-          # copy core portfolio files (safe-fail if missing)
-          cp -v index.html public_site/ || true
-          cp -v style.css public_site/ || true
-          cp -v script.js public_site/ || true
+          # Copy required application files; fail the deploy if one is missing.
+          cp -v index.html public_site/
+          cp -v style.css public_site/
+          cp -v home-redesign.css public_site/
+          cp -v case-redesign.css public_site/
+          cp -v script.js public_site/
           # copy site folders: case studies, both resumes, images
           for d in work resume operation-resume assets images static img; do
             if [ -d "$d" ]; then cp -r "$d" public_site/; fi
