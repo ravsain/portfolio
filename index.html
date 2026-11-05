@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en" data-view="product">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,25 +13,17 @@
 <meta property="og:description" content="I turn business problems into shipped software. Go POS rebuild, Python LLM agent, payment gateway, Scrumban delivery. MBA in Business Analytics.">
 <meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#07070f">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%235ee7c2'%3ER%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#efeee8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e6e5dc'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%23355d45'%3ER%3C/text%3E%3C/svg%3E">
 <script>
-  /* set the view before first paint so there's no flash */
-  (function () {
-    var V = ['product', 'eng', 'ops'], v = 'product';
-    try {
-      var q = new URLSearchParams(location.search).get('view'), s = localStorage.getItem('rps-view');
-      v = V.indexOf(q) > -1 ? q : (V.indexOf(s) > -1 ? s : 'product');
-    } catch (e) {}
-    document.documentElement.setAttribute('data-view', v);
-    document.documentElement.classList.add('js');
-  })();
+  document.documentElement.classList.add('js');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="home-redesign.css">
 </head>
 <body data-root="">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -49,11 +41,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="viewswitch" role="group" aria-label="Show my profile for">
-      <button type="button" data-set-view="product" aria-pressed="true"><span class="vs-long">Product</span><span class="vs-short">Product</span></button>
-      <button type="button" data-set-view="eng" aria-pressed="false"><span class="vs-long">Engineering</span><span class="vs-short">Eng</span></button>
-      <button type="button" data-set-view="ops" aria-pressed="false"><span class="vs-long">Operations</span><span class="vs-short">Ops</span></button>
-    </div>
     <button type="button" class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </div>
 </header>
@@ -63,7 +50,7 @@
     <li><a href="#experience">Experience</a></li>
     <li><a href="#work">Case studies</a></li>
     <li><a href="#skills">Skills</a></li>
-    <li><a href="#github">GitHub</a></li>
+    <li><a href="#operations-game">Operations game</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </div>
@@ -76,78 +63,53 @@
     <div class="hero-copy">
       <span class="status"><i aria-hidden="true"></i> Open to new roles · Gurugram, India</span>
 
-      <p class="hero-name"><b>Ravender Pratap Singh</b> ·
-        <span data-only="product">Product Analyst</span><span data-only="eng">Software Developer</span><span data-only="ops">Operations &amp; Program Lead</span>
-      </p>
+      <p class="hero-name"><b>Ravender Pratap Singh</b> · Product &amp; Quality Analyst · Developer</p>
 
       <h1 class="hero-title">
-        <span data-only="product">I turn business problems into <em>shipped software.</em></span>
-        <span data-only="eng">I build the systems <em>I&nbsp;spec.</em></span>
-        <span data-only="ops">I help teams ship <em>predictably.</em></span>
+        I turn business problems into <em>shipped software.</em>
       </h1>
 
-      <p class="hero-sub" data-only="product">MBA in Business Analytics with 3+ years across product, QA and data. I gather requirements, write the PRD, prioritise the backlog, and stay with the feature until it's tested and live.</p>
-      <p class="hero-sub" data-only="eng">I work in Go, Python and React. At Vervebot I led a from-scratch Point of Sale rebuild on a Go backend, put a Python LLM agent into production, and covered critical flows with Playwright and API automation.</p>
-      <p class="hero-sub" data-only="ops">I moved a dev team to Scrumban, coordinated a payment gateway rollout across business and engineering, and automated 30% of testing for 20% faster cycles. Process first, then tools.</p>
+      <p class="hero-sub">I connect product thinking, Go and Python development, QA automation, and delivery operations. Over 3+ years, I have taken work from requirements and system design through testing, release, and measurement.</p>
 
       <div class="hero-actions">
         <a class="btn btn-primary" data-cv href="resume/Ravender_Pratap_Singh_Resume.pdf" download>
           <i class="fas fa-download" aria-hidden="true"></i>
-          <span data-only="product">Download Product CV</span><span data-only="eng">Download Developer CV</span><span data-only="ops">Download Operations CV</span>
+          Download resume
         </a>
         <a class="btn btn-ghost" href="#work">See case studies <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
-      <div class="picker">
-        <p class="picker-label">// what are you hiring for?</p>
-        <div class="picker-options" role="group" aria-label="What are you hiring for?">
-          <button type="button" class="pick" data-set-view="product" aria-pressed="true"><b><i></i>Product</b><span>Product Analyst, Product Owner, Business Analyst</span></button>
-          <button type="button" class="pick" data-set-view="eng" aria-pressed="false"><b><i></i>Engineering</b><span>Software Developer, QA Automation, Full-stack</span></button>
-          <button type="button" class="pick" data-set-view="ops" aria-pressed="false"><b><i></i>Operations</b><span>Operations, Program Manager, Scrum Master</span></button>
-        </div>
+      <div class="hero-metrics" aria-label="Selected career outcomes">
+        <div><b>3+</b><span>years across product &amp; QA</span></div>
+        <div><b>30%</b><span>test scenarios automated</span></div>
+        <div><b>20%</b><span>faster test cycles</span></div>
+        <div><b>0.87</b><span>SkillRadar model R²</span></div>
       </div>
+
     </div>
 
     <!-- recruiter quick-fit card -->
     <aside class="fitcard reveal" aria-label="Quick summary for recruiters">
       <div class="fitcard-top"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span class="mono">recruiter_tldr.md</span></div>
 
-      <h3 data-only="product">A product analyst who can also build and test.</h3>
-      <h3 data-only="eng">A developer who understands the business case.</h3>
-      <h3 data-only="ops">An operations lead who knows how the software works.</h3>
+      <h3>Product thinking, engineering depth, and quality built in.</h3>
 
-      <div class="fit-roles" data-only="product"><span>Product Analyst</span><span>Product Owner</span><span>Business Analyst</span></div>
-      <div class="fit-roles" data-only="eng"><span>Software Developer</span><span>Go / Python</span><span>QA Automation</span></div>
-      <div class="fit-roles" data-only="ops"><span>Operations</span><span>Program Manager</span><span>Scrum Master</span></div>
+      <div class="fit-roles"><span>Product &amp; Quality</span><span>Go / Python</span><span>QA automation</span><span>Scrumban delivery</span></div>
 
       <dl class="fit-facts">
         <dt>experience</dt><dd>3+ years · product, QA &amp; data</dd>
         <dt>now</dt><dd>Product &amp; Quality Analyst, Vervebot</dd>
         <dt>education</dt><dd>MBA, Business Analytics</dd>
         <dt>toolkit</dt>
-        <dd data-only="product">Jira · PRDs · SQL · Tableau · Python</dd>
-        <dd data-only="eng">Go · Python · React/TS · PostgreSQL · Playwright</dd>
-        <dd data-only="ops">Jira · Trello · Scrumban · Excel · SQL</dd>
+        <dd>Go · Python · React · PostgreSQL · Playwright · SQL · Jira</dd>
         <dt>based in</dt><dd>Gurugram, India</dd>
       </dl>
 
-      <div class="fit-proof" data-only="product">
-        <div><b>3+ yrs</b><span>product, QA &amp; data</span></div>
-        <div><b>MBA</b><span>business analytics</span></div>
-        <div><b>5</b><span>case studies below</span></div>
-      </div>
-      <div class="fit-proof" data-only="eng">
-        <div><b>Go</b><span>POS backend rebuild</span></div>
-        <div><b>R² 0.87</b><span>salary prediction model</span></div>
-        <div><b>30%</b><span>tests automated</span></div>
-      </div>
-      <div class="fit-proof" data-only="ops">
-        <div><b>30%</b><span>testing automated</span></div>
+      <div class="fit-proof">
+        <div><b>30%</b><span>test scenarios automated</span></div>
         <div><b>20%</b><span>faster test cycles</span></div>
-        <div><b>3</b><span>companies, cross-team delivery</span></div>
+        <div><b>R² 0.87</b><span>salary model</span></div>
       </div>
-
-      <a class="btn btn-ghost btn-sm" data-cv href="resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i> One-page CV for this role</a>
     </aside>
   </div>
 </section>
@@ -168,12 +130,7 @@
       <li class="stage" data-lenses="ops"><h3>Ship</h3><p>Run delivery with Scrumban and coordinate the rollout across teams.</p><div class="tags"><span class="tag">Scrumban</span><span class="tag">Jira</span></div></li>
       <li class="stage" data-lenses="product ops"><h3>Measure</h3><p>Read the data with SQL and dashboards, then feed what I learn into the next cycle.</p><div class="tags"><span class="tag">SQL</span><span class="tag">Dashboards</span></div></li>
     </ol>
-    <p class="cycle-note">
-      <span data-only="product">Highlighted: where a <b>product</b> team gets the most from me.</span>
-      <span data-only="eng">Highlighted: where an <b>engineering</b> team gets the most from me.</span>
-      <span data-only="ops">Highlighted: where an <b>operations</b> team gets the most from me.</span>
-      Switch the view at the top to see the others.
-    </p>
+    <p class="cycle-note">A continuous loop: understand the problem, shape the solution, build it, test it, ship it, and measure what changes.</p>
   </div>
 </section>
 
@@ -196,19 +153,11 @@
         </div>
         <div>
           <h3 class="job-role">Product &amp; Quality Analyst (Automation)</h3>
-          <ul class="points" data-only="product eng">
-            <li>Led a from-scratch <strong>Point of Sale (POS) redesign</strong> on a scalable <strong>Go (Golang)</strong> backend, backed by <strong>Playwright</strong> and API test automation.</li>
-            <li>Led rollout of a <strong>Python LLM agent</strong> in the POS for real-time merchant sales insights and automated support queries.</li>
-            <li>Drove the <strong>in-house payment gateway</strong> integration, translating revenue goals into requirements, specs and PRDs.</li>
-            <li>Moved the development team to <strong>Scrumban</strong>; run standups, backlog grooming and sprint tracking in Jira and Trello.</li>
-            <li>Automated critical workflows and regression scenarios, cutting regression testing time and catching bugs before release.</li>
-          </ul>
-          <ul class="points" data-only="ops">
-            <li>Led the <strong>POS redesign program</strong> end to end, owning requirements, backlog priorities and delivery across teams.</li>
-            <li>Moved the development team to <strong>Scrumban</strong>, running standups, backlog grooming and sprint tracking in Jira and Trello.</li>
-            <li>Coordinated the <strong>in-house payment gateway integration</strong> across business and engineering, aligned to revenue goals.</li>
-            <li>Rolled out an <strong>AI agent</strong> in the POS that automates merchant support queries and delivers real-time sales insights.</li>
-            <li><strong>Automated critical workflows</strong> and regression checks, cutting regression time and catching issues before release.</li>
+          <ul class="points">
+            <li>Led the from-scratch <strong>POS redesign</strong>, translating requirements into specs, PRDs and a prioritised backlog for a scalable <strong>Go</strong> backend.</li>
+            <li>Coordinated the <strong>in-house payment gateway</strong> rollout and shipped a <strong>Python LLM agent</strong> for merchant insights and support automation.</li>
+            <li>Moved the team to <strong>Scrumban</strong> and ran standups, backlog grooming and delivery tracking in Jira and Trello.</li>
+            <li>Automated critical workflows and regression checks with <strong>Playwright</strong> and API testing to catch issues before release.</li>
           </ul>
           <div class="tags">
             <span class="tag">Go</span><span class="tag">Python</span><span class="tag">LLM agents</span><span class="tag">Playwright</span><span class="tag">API automation</span><span class="tag">Jira</span><span class="tag">Scrumban</span>
@@ -225,15 +174,10 @@
         </div>
         <div>
           <h3 class="job-role">Data Analyst</h3>
-          <ul class="points" data-only="product eng">
-            <li>Evaluated and fine-tuned <strong>AI model performance</strong> with Google client teams, ensuring high data quality and system reliability.</li>
-            <li>Performed data analysis with <strong>SQL, Pandas and NumPy</strong> and built dashboards that turned findings into actionable insights.</li>
-            <li>Mentored team members and conducted performance evaluations to build skills across the team.</li>
-          </ul>
-          <ul class="points" data-only="ops">
-            <li>Safeguarded <strong>data quality and reliability</strong> in AI model evaluation work for Google client teams.</li>
-            <li>Analysed data with <strong>SQL, Pandas and NumPy</strong> and built dashboards that turned findings into actionable insights.</li>
-            <li><strong>Mentored team members</strong> and ran performance evaluations to build skills across the team.</li>
+          <ul class="points">
+            <li>Evaluated and fine-tuned <strong>AI models</strong> with Google client teams, protecting data quality and system reliability.</li>
+            <li>Used <strong>SQL, Pandas and NumPy</strong> to analyse datasets and build dashboards that made findings actionable.</li>
+            <li>Mentored teammates and conducted performance evaluations to grow capability across the team.</li>
           </ul>
           <div class="tags"><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">Dashboards</span><span class="tag">AI evaluation</span></div>
         </div>
@@ -248,15 +192,10 @@
         </div>
         <div>
           <h3 class="job-role">Quality Analyst</h3>
-          <ul class="points" data-only="product eng">
-            <li><strong>Automated 30% of test scenarios with Selenium</strong>, improving test cycle efficiency by <strong>20%</strong> and reducing manual effort.</li>
-            <li>Designed and executed test cases for a high-traffic e-learning platform, keeping critical production defects to a minimum.</li>
-            <li>Ran functional, integration, regression and performance testing; triaged defects with product and engineering teams.</li>
-          </ul>
-          <ul class="points" data-only="ops">
-            <li><strong>Automated 30% of test scenarios</strong>, improving test cycle efficiency by <strong>20%</strong> and reducing manual effort.</li>
-            <li>Kept critical production defects to a minimum on a <strong>high-traffic e-learning platform</strong> through structured test design.</li>
-            <li>Worked with cross-functional teams to identify, document and resolve defects, ensuring high-quality releases.</li>
+          <ul class="points">
+            <li>Automated <strong>30% of test scenarios with Selenium</strong>, improving test-cycle efficiency by <strong>20%</strong>.</li>
+            <li>Designed and executed functional, integration, regression and performance tests for a high-traffic e-learning platform.</li>
+            <li>Triaged defects with product and engineering teams to keep critical production issues low.</li>
           </ul>
           <div class="tags"><span class="tag">Selenium</span><span class="tag">Test automation</span><span class="tag">Regression</span><span class="tag">Performance testing</span></div>
         </div>
@@ -266,63 +205,72 @@
 </section>
 
 <!-- ── CASE STUDIES ────────────────────────────────────── -->
-<!-- Order and size change with the view: --o-product / --o-eng / --o-ops set the order,
-     data-feature lists the views where the card is shown large. -->
 <section class="section" id="work">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Case studies</span>
       <h2>What I've built, and how I ran it.</h2>
-      <p>Each case study shows the product, engineering and operations side. The one that matches your view comes first.</p>
+      <p>Selected work across software, analytics, automation and delivery.</p>
     </div>
 
     <div class="work-grid">
 
-      <article class="work-card reveal" id="work-pos" style="--o-product:1;--o-eng:1;--o-ops:1" data-feature="product eng ops"
+      <article class="work-card reveal" id="work-pos"
         data-title="Vervebot POS platform" data-context="Case study · 2025 – present"
         data-skills="product-ownership requirements backlog stakeholders go python llm scrumban process automation coordination playwright api-testing">
         <div class="work-meta"><span>Vervebot · work</span><span>2025 – now</span></div>
         <h3>Rebuilding a Point of Sale from scratch</h3>
         <div class="what">Go backend · payment gateway · LLM agent · Scrumban</div>
-        <p data-only="product">Owned requirements and PRDs for a full POS redesign, shaped the payment gateway around revenue goals and defined the AI agent merchants now use.</p>
-        <p data-only="eng">A scalable Go backend using goroutines for concurrent load, a Python LLM agent wired into the POS, and Playwright plus API automation guarding releases.</p>
-        <p data-only="ops">Moved the team to Scrumban to deliver it, coordinated the payment gateway rollout across business and engineering, and automated regression testing.</p>
+        <p>Led the POS redesign across requirements, a scalable Go backend, payment integration, a merchant-facing Python AI agent, Playwright automation and Scrumban delivery.</p>
         <div class="tags"><span class="tag">Go</span><span class="tag">Python</span><span class="tag">LLM</span><span class="tag">Playwright</span><span class="tag">Scrumban</span></div>
         <div class="work-foot">
-          <a class="work-link stretched" href="work/vervebot-pos.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button type="button" class="work-expand" data-project-open aria-label="Quick view: Vervebot POS platform"><i class="fas fa-expand" aria-hidden="true"></i> Quick view</button>
+          <a class="work-link stretched" href="work/vervebot-pos.html">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
         </div>
       </article>
 
-      <article class="work-card reveal" id="work-kanbanhub" style="--o-product:4;--o-eng:2;--o-ops:3" data-feature="eng"
+      <article class="work-card reveal" id="work-parking-os"
+        data-title="Society Vehicle &amp; Parking OS" data-context="Personal project · 2026"
+        data-skills="python react postgres rest-api websockets">
+        <div class="work-meta"><span>Personal project</span><span>2026</span></div>
+        <h3>Society Vehicle &amp; Parking OS</h3>
+        <div class="what">Multi-society gate and parking platform</div>
+        <p>Gate entry, visitor passes, vehicle search and alerts, with live parking occupancy powered by Redis and WebSockets, camera plate OCR, and Docker deployment.</p>
+        <div class="tags"><span class="tag">FastAPI</span><span class="tag">PostgreSQL</span><span class="tag">Redis</span><span class="tag">React</span><span class="tag">WebSockets</span><span class="tag">Docker</span></div>
+        <div class="work-foot">
+          <button type="button" class="work-expand" data-project-open aria-label="Quick view: Society Vehicle &amp; Parking OS"><i class="fas fa-expand" aria-hidden="true"></i> Quick view</button>
+          <a class="work-link stretched" href="work/parking-os.html">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </article>
+
+      <article class="work-card reveal" id="work-kanbanhub"
         data-title="KanbanHub" data-context="Project · 2026"
         data-skills="go react postgres rest-api websockets llm auth feature-design">
         <div class="work-meta"><span>Personal project</span><span>2026</span></div>
         <h3>KanbanHub</h3>
         <div class="what">Full-stack project management platform</div>
-        <p data-only="product">Kanban boards, sprint tracking, team chat and budgets in one tool, scoped around how delivery teams actually work.</p>
-        <p data-only="eng">Go (Chi, pgx) and PostgreSQL with RBAC, multi-tenancy, WebSocket chat and Cloudflare R2, plus a React 19 and TypeScript front end with an AI assistant.</p>
-        <p data-only="ops">The delivery mechanics I run every day, built as software: kanban flow, sprint tracking, budget visibility and role-based access.</p>
+        <p>A Go and React platform that brings kanban, sprint tracking, team chat and budgets together, with PostgreSQL, multi-tenant access and an AI assistant.</p>
         <div class="tags"><span class="tag">Go</span><span class="tag">PostgreSQL</span><span class="tag">React 19</span><span class="tag">TypeScript</span><span class="tag">WebSockets</span></div>
         <div class="work-foot">
-          <a class="work-link stretched" href="work/kanbanhub.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button type="button" class="work-expand" data-project-open aria-label="Quick view: KanbanHub"><i class="fas fa-expand" aria-hidden="true"></i> Quick view</button>
+          <a class="work-link stretched" href="work/kanbanhub.html">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           <!-- TODO: paste KanbanHub links (they stay hidden while href="#") -->
           <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> Live demo</a>
           <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
         </div>
       </article>
 
-      <article class="work-card reveal" id="work-pennywise" style="--o-product:2;--o-eng:3;--o-ops:5" data-feature="product"
+      <article class="work-card reveal" id="work-pennywise"
         data-title="PennyWise" data-context="Project · 2026 · live"
         data-skills="react react-native python postgres rest-api auth feature-design product-ownership">
         <div class="work-meta"><span>Personal project</span><span class="live">● live · 2026</span></div>
         <h3>PennyWise</h3>
         <div class="what">Shared budgeting app for web and mobile</div>
-        <p data-only="product">A Netflix-style shared account model: several people budget under one primary account and see the same numbers in real time.</p>
-        <p data-only="eng">React and React Native apps on a Python API and Supabase, secured with JWT, RBAC and Postgres row-level security.</p>
-        <p data-only="ops">Shipped and running: web on Vercel, API on Render, data on Supabase, with documented API endpoints.</p>
+        <p>A live shared-budgeting app for web and mobile, backed by a Python API and Supabase with JWT, role-based access and PostgreSQL row-level security.</p>
         <div class="tags"><span class="tag">React Native</span><span class="tag">React</span><span class="tag">Python</span><span class="tag">Supabase</span><span class="tag">RLS</span></div>
         <div class="work-foot">
-          <a class="work-link stretched" href="work/pennywise.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button type="button" class="work-expand" data-project-open aria-label="Quick view: PennyWise"><i class="fas fa-expand" aria-hidden="true"></i> Quick view</button>
+          <a class="work-link stretched" href="work/pennywise.html">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           <a class="work-ext" href="https://pennywise-rav.vercel.app" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> Live app</a>
           <a class="work-ext" href="https://mybudgetapp-e7yy.onrender.com/docs" target="_blank" rel="noopener"><i class="fas fa-book-open" aria-hidden="true"></i> API docs</a>
           <!-- TODO: paste PennyWise GitHub link -->
@@ -330,36 +278,34 @@
         </div>
       </article>
 
-      <article class="work-card reveal" id="work-skillradar" style="--o-product:3;--o-eng:4;--o-ops:4"
+      <article class="work-card reveal" id="work-skillradar"
         data-title="SkillRadar" data-context="Capstone · 2024"
         data-skills="python ml forecasting dashboards data-analysis">
         <div class="work-meta"><span>Capstone project</span><span>2024</span></div>
         <h3>SkillRadar</h3>
         <div class="what">Tech-skills market intelligence</div>
-        <p data-only="product">Answers a real planning question: which tech skills are in demand, what they pay, and where the market is heading to 2028.</p>
-        <p data-only="eng">Pulls live data from 9 public APIs for 65 skills; Holt-Winters forecasts and a RandomForest salary model (R² 0.87) behind Streamlit and Flask dashboards.</p>
-        <p data-only="ops">One pipeline from 9 live data sources to two dashboards, with forecasts that put 80% confidence intervals on every projection.</p>
+        <p>Market-intelligence dashboards built from 9 public APIs, tracking 65 skills with demand forecasts to 2028 and a salary model with R² 0.87.</p>
         <div class="tags"><span class="tag">Python</span><span class="tag">scikit-learn</span><span class="tag">statsmodels</span><span class="tag">Streamlit</span><span class="tag">Plotly</span></div>
         <div class="work-foot">
-          <a class="work-link stretched" href="work/skillradar.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button type="button" class="work-expand" data-project-open aria-label="Quick view: SkillRadar"><i class="fas fa-expand" aria-hidden="true"></i> Quick view</button>
+          <a class="work-link stretched" href="work/skillradar.html">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           <a class="work-ext" href="https://github.com/ravsain/Analysis-on-Emerging-Technology-Skills-and-Trends" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
           <!-- TODO: paste SkillRadar live dashboard link -->
           <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fas fa-globe" aria-hidden="true"></i> Live dashboard</a>
         </div>
       </article>
 
-      <article class="work-card reveal" id="work-sauce" style="--o-product:5;--o-eng:5;--o-ops:2" data-feature="ops"
+      <article class="work-card reveal" id="work-sauce"
         data-title="Sauce and Spoons" data-context="Capstone · Oct 2024"
         data-skills="planning risk quality stakeholders requirements reporting">
         <div class="work-meta"><span>Capstone simulation</span><span>Oct 2024</span></div>
         <h3>Sauce and Spoons</h3>
         <div class="what">Restaurant operations pilot: tabletop menu tablets</div>
-        <p data-only="product">Scoped a tablet-ordering pilot to speed up service and guest turnover, with SMART goals and a stakeholder power grid.</p>
-        <p data-only="eng">The requirements side of a hardware rollout: scope, quality standards and execution benchmarks for tabletop menu tablets.</p>
-        <p data-only="ops">Full project lifecycle: Gantt plan, three-point estimates, risk strategies, quality standards and an impact report on revenue and satisfaction.</p>
+        <p>A restaurant tablet-ordering pilot planned from SMART goals and stakeholder mapping through schedule, risk, quality standards and impact reporting.</p>
         <div class="tags"><span class="tag">Project planning</span><span class="tag">Risk</span><span class="tag">Gantt</span><span class="tag">SMART goals</span></div>
         <div class="work-foot">
-          <a class="work-link stretched" href="work/sauce-and-spoons.html" data-keep-view>Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <button type="button" class="work-expand" data-project-open aria-label="Quick view: Sauce and Spoons"><i class="fas fa-expand" aria-hidden="true"></i> Quick view</button>
+          <a class="work-link stretched" href="work/sauce-and-spoons.html">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
           <!-- TODO: paste a link to the project report or slides -->
           <a class="work-ext" data-slot href="#" target="_blank" rel="noopener"><i class="fas fa-file-lines" aria-hidden="true"></i> Report</a>
         </div>
@@ -449,22 +395,76 @@
   </div>
 </section>
 
-<!-- ── GITHUB (live) ───────────────────────────────────── -->
-<section class="section" id="github">
+<!-- ── INTERACTIVE PLAYGROUND ──────────────────────────── -->
+<section class="section" id="playground">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">On GitHub</span>
-      <h2>Recently updated repositories.</h2>
-      <p>Loaded live from GitHub each time you visit, so it's always current.</p>
+      <span class="eyebrow">Interactive playground</span>
+      <h2>Latency, made visible.</h2>
+      <p>A small API performance exercise. Choose a route and run a local simulation; no live service is called.</p>
     </div>
-    <div class="gh-grid" id="gh-grid">
-      <div class="gh-card gh-skel" aria-hidden="true"></div>
-      <div class="gh-card gh-skel" aria-hidden="true"></div>
-      <div class="gh-card gh-skel" aria-hidden="true"></div>
+    <div class="latency-lab reveal">
+      <div class="latency-controls">
+        <label for="latency-route">Endpoint</label>
+        <select id="latency-route">
+          <option value="orders">GET /api/orders</option>
+          <option value="health">GET /api/health</option>
+          <option value="payments">POST /api/payments</option>
+        </select>
+        <button type="button" class="btn btn-primary" id="run-simulation"><i class="fas fa-play" aria-hidden="true"></i> Run simulation</button>
+      </div>
+      <div class="latency-main">
+        <div class="latency-results" id="latency-results" aria-live="polite">
+          <div class="latency-stats">
+            <div><span>Median</span><b data-latency-median>--</b></div>
+            <div><span>95th percentile</span><b data-latency-p95>--</b></div>
+            <div><span>Requests</span><b data-latency-count>0</b></div>
+          </div>
+          <p class="latency-status" data-latency-status>Ready when you are. Simulated request timings only.</p>
+        </div>
+        <div class="latency-chart" id="latency-chart" role="img" aria-label="Simulated request latency chart">
+          <p class="latency-empty">Run the simulation to plot 12 request samples.</p>
+        </div>
+      </div>
+      <div class="latency-legend"><span><i></i> Request duration</span><span>Local simulation · not production telemetry</span></div>
     </div>
-    <div class="gh-foot">
-      <span id="gh-status" class="mono">Loading from api.github.com…</span>
-      <a class="btn btn-ghost btn-sm" href="https://github.com/ravsain" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> github.com/ravsain</a>
+  </div>
+</section>
+
+<!-- ── OPERATIONS GAME ─────────────────────────────────── -->
+<section class="section" id="operations-game">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Operations drill · 4 decisions</span>
+      <h2>Run the gatehouse shift.</h2>
+      <p>A short operations simulation: keep traffic moving while protecting entry checks and parking capacity.</p>
+    </div>
+    <div class="ops-game reveal" id="ops-game">
+      <div class="ops-game-head">
+        <div><span class="ops-kicker mono">CONTROL ROOM / SHIFT 01</span><h3>Gatehouse control</h3></div>
+        <button type="button" class="ops-reset" data-ops-reset aria-label="Restart the shift" title="Restart the shift"><i class="fas fa-rotate-right" aria-hidden="true"></i></button>
+      </div>
+      <div class="ops-game-main">
+        <div class="ops-metrics" aria-label="Shift metrics">
+          <div class="ops-metric"><div><span>Flow</span><b data-op-flow>68%</b></div><div class="ops-track"><i data-op-flowbar></i></div></div>
+          <div class="ops-metric"><div><span>Safety</span><b data-op-safety>80%</b></div><div class="ops-track"><i data-op-safetybar></i></div></div>
+          <div class="ops-metric"><div><span>Spaces</span><b data-op-spaces>54%</b></div><div class="ops-track"><i data-op-spacesbar></i></div></div>
+          <div class="ops-score"><span>Shift score</span><b data-op-score>0000</b></div>
+        </div>
+        <div class="ops-scenario">
+          <div class="ops-scenario-meta"><span class="mono" data-op-round>INCIDENT 01 / 04</span><span data-op-time>08:40 · ARRIVAL</span></div>
+          <h4 data-op-title>Visitor wave at the main gate</h4>
+          <p data-op-prompt>Three visitor cars arrive together. The queue is growing and two passes still need confirmation. What do you do first?</p>
+          <div class="ops-actions" data-op-actions>
+            <button type="button" class="ops-choice" data-op-choice="0"><span class="ops-choice-key">A</span><span data-op-choice-label>Pre-check the visitor passes</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" class="ops-choice" data-op-choice="1"><span class="ops-choice-key">B</span><span data-op-choice-label>Wave every car through</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+            <button type="button" class="ops-choice" data-op-choice="2"><span class="ops-choice-key">C</span><span data-op-choice-label>Pause all entry until clear</span><i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+          </div>
+          <p class="ops-feedback" data-op-feedback aria-live="polite" hidden></p>
+          <button type="button" class="btn btn-primary ops-next" data-op-next hidden>Next incident <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
+        </div>
+      </div>
+      <div class="ops-game-foot"><span class="mono" data-op-status>Choose a response to begin the shift.</span><div class="ops-progress" role="progressbar" aria-label="Shift progress" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><i data-op-progress></i></div></div>
     </div>
   </div>
 </section>
@@ -506,15 +506,10 @@
 
     <div class="cv-box reveal">
       <h3>Download a resume</h3>
-      <p>Two one-page versions, built to read cleanly in applicant tracking systems. The one for your view is highlighted.</p>
-      <a class="cv-item" data-cv-kind="dev" href="resume/Ravender_Pratap_Singh_Resume.pdf" download>
+      <p>One concise resume covering product, engineering, quality and delivery experience.</p>
+      <a class="cv-item" href="resume/Ravender_Pratap_Singh_Resume.pdf" download>
         <i class="fas fa-file-pdf" aria-hidden="true"></i>
-        <div><b>Product Analyst &amp; Developer</b><span>Product, engineering and QA roles</span></div>
-        <i class="fas fa-download dl" aria-hidden="true"></i>
-      </a>
-      <a class="cv-item" data-cv-kind="ops" href="operation-resume/Ravender_Pratap_Singh_Operations_Resume.pdf" download>
-        <i class="fas fa-file-pdf" aria-hidden="true"></i>
-        <div><b>Operations, Program Mgmt &amp; Product Owner</b><span>Operations, program and delivery roles</span></div>
+        <div><b>Ravender Pratap Singh</b><span>Product, engineering, quality and delivery</span></div>
         <i class="fas fa-download dl" aria-hidden="true"></i>
       </a>
     </div>
@@ -535,6 +530,18 @@
     </div>
   </div>
 </footer>
+
+<dialog class="project-dialog" id="project-dialog" aria-labelledby="project-dialog-title">
+  <div class="project-dialog-head">
+    <span class="mono" id="project-dialog-context">Project</span>
+    <button type="button" data-project-close aria-label="Close project details"><i class="fas fa-xmark" aria-hidden="true"></i></button>
+  </div>
+  <h2 id="project-dialog-title"></h2>
+  <p class="project-dialog-subtitle" id="project-dialog-subtitle"></p>
+  <p class="project-dialog-description" id="project-dialog-description"></p>
+  <div class="tags" id="project-dialog-tags"></div>
+  <a class="btn btn-primary" id="project-dialog-link" href="#">Read full case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</dialog>
 
 <script src="script.js"></script>
 </body>

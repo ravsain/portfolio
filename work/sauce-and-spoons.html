@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-view="product">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,50 +12,38 @@
 <meta property="og:description" content="Sauce and Spoons: a project-management capstone planning and closing a restaurant pilot of tabletop menu tablets, with Gantt plans, three-point estimates and risk management.">
 <meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#07070f">
+<meta name="theme-color" content="#efeee8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%235ee7c2'%3ER%3C/text%3E%3C/svg%3E">
 <script>
-  (function () {
-    var V = ['product', 'eng', 'ops'], v = 'product';
-    try {
-      var q = new URLSearchParams(location.search).get('view'), s = localStorage.getItem('rps-view');
-      v = V.indexOf(q) > -1 ? q : (V.indexOf(s) > -1 ? s : 'product');
-    } catch (e) {}
-    document.documentElement.setAttribute('data-view', v);
-    document.documentElement.classList.add('js');
-  })();
+  document.documentElement.classList.add('js');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../case-redesign.css">
 </head>
 <body data-root="../">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="../index.html" class="logo" data-keep-view aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
+    <a href="../index.html" class="logo" aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="../index.html#work" data-keep-view>All case studies</a></li>
-        <li><a href="../index.html#skills" data-keep-view>Skills</a></li>
-        <li><a href="../index.html#contact" data-keep-view>Contact</a></li>
+        <li><a href="../index.html#work">All case studies</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="viewswitch" role="group" aria-label="Show my profile for">
-      <button type="button" data-set-view="product" aria-pressed="true"><span class="vs-long">Product</span><span class="vs-short">Product</span></button>
-      <button type="button" data-set-view="eng" aria-pressed="false"><span class="vs-long">Engineering</span><span class="vs-short">Eng</span></button>
-      <button type="button" data-set-view="ops" aria-pressed="false"><span class="vs-long">Operations</span><span class="vs-short">Ops</span></button>
-    </div>
   </div>
 </header>
 
 <main id="main">
   <section class="case-hero">
     <div class="wrap">
-      <a class="back" href="../index.html#work" data-keep-view><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
+      <a class="back" href="../index.html#work"><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
       <h1>Sauce and Spoons: piloting tabletop menu tablets</h1>
       <p class="eyebrow" style="margin-top:14px">Capstone simulation · Oct 2024</p>
       <p class="lede">A project-management capstone: plan, run and close a pilot of tabletop menu tablets for a restaurant, aimed at faster service and higher guest turnover.</p>
@@ -79,17 +67,16 @@
 
   <section class="case-section">
     <div class="wrap">
-      <h2>Two ways to read this project</h2>
-      <p class="sub">All of them are here. The one that matches the view you picked comes first.</p>
-      <div class="lenses">
-          <article class="lens" data-lens="product">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Product lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Framed the problem: slow service and low guest turnover, with tabletop tablets as the proposed fix.</li><li>Defined scope and <strong>SMART goals</strong> so success could be measured.</li><li>Mapped stakeholders on a <strong>power grid</strong> to decide who to involve, and how.</li></ul>
-          </article>
-          <article class="lens" data-lens="ops">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Operations lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Built the plan with a <strong>Gantt</strong> structure and <strong>three-point time estimates</strong>.</li><li>Wrote <strong>risk management</strong> strategies grounded in industry research.</li><li>Set <strong>quality management</strong> standards and evaluated execution against benchmarks.</li><li>Delivered closing and impact reports on revenue and customer satisfaction.</li></ul>
-          </article>
+      <h2>Project scope &amp; delivery</h2>
+      <div class="contributions">
+        <ol class="contribution-list">
+          <li>Scoped a tabletop ordering pilot to address slow service and improve guest turnover.</li>
+          <li>Defined SMART goals and mapped stakeholder influence to guide decisions and communication.</li>
+          <li>Built a Gantt-based plan using three-point estimates for the project schedule.</li>
+          <li>Identified delivery risks and established quality standards and execution benchmarks.</li>
+          <li>Prepared closing and impact reports focused on revenue and customer satisfaction.</li>
+        </ol>
+        <aside class="contribution-note"><b>End-to-end project plan</b>The work connects the proposed service improvement to scope, schedule, risk, quality and measurable outcomes.</aside>
       </div>
     </div>
   </section>
@@ -103,13 +90,13 @@
       </div>
 
       <div class="hero-actions" style="margin-top:28px">
-        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
-        <a class="btn btn-ghost" href="../index.html#contact" data-keep-view>Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download resume</a>
+        <a class="btn btn-ghost" href="../index.html#contact">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <nav class="case-nav" aria-label="More case studies">
-        <a href="skillradar.html" data-keep-view><small>← previous</small><b>SkillRadar</b></a>
-        <a href="vervebot-pos.html" data-keep-view><small>next →</small><b>Vervebot POS</b></a>
+        <a href="skillradar.html"><small>← previous</small><b>SkillRadar</b></a>
+        <a href="vervebot-pos.html"><small>next →</small><b>Vervebot POS</b></a>
       </nav>
     </div>
   </section>

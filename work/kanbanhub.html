@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-view="product">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,50 +12,38 @@
 <meta property="og:description" content="KanbanHub: a full-stack project management platform with kanban boards, sprint tracking, real-time chat and budgeting, built in Go and React by Ravender Pratap Singh.">
 <meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#07070f">
+<meta name="theme-color" content="#efeee8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%235ee7c2'%3ER%3C/text%3E%3C/svg%3E">
 <script>
-  (function () {
-    var V = ['product', 'eng', 'ops'], v = 'product';
-    try {
-      var q = new URLSearchParams(location.search).get('view'), s = localStorage.getItem('rps-view');
-      v = V.indexOf(q) > -1 ? q : (V.indexOf(s) > -1 ? s : 'product');
-    } catch (e) {}
-    document.documentElement.setAttribute('data-view', v);
-    document.documentElement.classList.add('js');
-  })();
+  document.documentElement.classList.add('js');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../case-redesign.css">
 </head>
 <body data-root="../">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="../index.html" class="logo" data-keep-view aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
+    <a href="../index.html" class="logo" aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="../index.html#work" data-keep-view>All case studies</a></li>
-        <li><a href="../index.html#skills" data-keep-view>Skills</a></li>
-        <li><a href="../index.html#contact" data-keep-view>Contact</a></li>
+        <li><a href="../index.html#work">All case studies</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="viewswitch" role="group" aria-label="Show my profile for">
-      <button type="button" data-set-view="product" aria-pressed="true"><span class="vs-long">Product</span><span class="vs-short">Product</span></button>
-      <button type="button" data-set-view="eng" aria-pressed="false"><span class="vs-long">Engineering</span><span class="vs-short">Eng</span></button>
-      <button type="button" data-set-view="ops" aria-pressed="false"><span class="vs-long">Operations</span><span class="vs-short">Ops</span></button>
-    </div>
   </div>
 </header>
 
 <main id="main">
   <section class="case-hero">
     <div class="wrap">
-      <a class="back" href="../index.html#work" data-keep-view><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
+      <a class="back" href="../index.html#work"><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
       <h1>KanbanHub: a project management platform, built end to end</h1>
       <p class="eyebrow" style="margin-top:14px">Personal project · 2026</p>
       <p class="lede">A full-stack tool that brings kanban boards, sprint tracking, real-time team chat and budgeting into one place. I scoped it, designed it and built both the Go backend and the React front end.</p>
@@ -79,21 +67,16 @@
 
   <section class="case-section">
     <div class="wrap">
-      <h2>Three ways to read this project</h2>
-      <p class="sub">All of them are here. The one that matches the view you picked comes first.</p>
-      <div class="lenses">
-          <article class="lens" data-lens="product">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Product lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Scoped the product around how delivery teams work: boards, sprints, chat and budgets in one tool instead of four.</li><li>Multi-tenancy so separate teams or organisations can share one deployment safely.</li><li>Granular roles (RBAC) so each person sees and edits only what they should.</li><li>An AI assistant built in, with a mock fallback so the product still demos without an API key.</li></ul>
-          </article>
-          <article class="lens" data-lens="eng">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Engineering lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Go backend on the <strong>Chi</strong> router with <strong>PostgreSQL via pgx</strong>.</li><li>Role-based access control and multi-tenancy enforced in the backend.</li><li>Real-time chat over <strong>WebSockets</strong>; file storage on <strong>Cloudflare R2</strong>.</li><li><strong>React 19, TypeScript, Tailwind CSS and TanStack Query</strong> on the front end.</li><li>AI assistant client compatible with OpenAI and Grok APIs, with mock fallback.</li></ul>
-          </article>
-          <article class="lens" data-lens="ops">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Operations lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Turns the delivery mechanics I run at work into software: kanban flow, sprint tracking and budget visibility.</li><li>Budgeting sits next to the board, so delivery and cost are tracked in the same place.</li><li>Role-based access mirrors how real teams split responsibilities.</li></ul>
-          </article>
+      <h2>Product work &amp; implementation</h2>
+      <div class="contributions">
+        <ol class="contribution-list">
+          <li>Designed one workspace around the way delivery teams operate: boards, sprint tracking, chat and budgets.</li>
+          <li>Built the interface in React 19 and TypeScript with Tailwind CSS and TanStack Query.</li>
+          <li>Implemented a Go API with Chi and PostgreSQL via pgx, including multi-tenancy and role-based access.</li>
+          <li>Added real-time team chat over WebSockets and file storage through Cloudflare R2.</li>
+          <li>Integrated an AI assistant with OpenAI- and Grok-compatible APIs plus a mock fallback for demos.</li>
+        </ol>
+        <aside class="contribution-note"><b>One connected workspace</b>Planning, communication and budget visibility live alongside each other, with access controls built into the platform.</aside>
       </div>
     </div>
   </section>
@@ -107,13 +90,13 @@
       </div>
 
       <div class="hero-actions" style="margin-top:28px">
-        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
-        <a class="btn btn-ghost" href="../index.html#contact" data-keep-view>Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download resume</a>
+        <a class="btn btn-ghost" href="../index.html#contact">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <nav class="case-nav" aria-label="More case studies">
-        <a href="vervebot-pos.html" data-keep-view><small>← previous</small><b>Vervebot POS</b></a>
-        <a href="pennywise.html" data-keep-view><small>next →</small><b>PennyWise</b></a>
+        <a href="parking-os.html"><small>← previous</small><b>Society Vehicle &amp; Parking OS</b></a>
+        <a href="pennywise.html"><small>next →</small><b>PennyWise</b></a>
       </nav>
     </div>
   </section>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-view="product">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,50 +12,38 @@
 <meta property="og:description" content="SkillRadar: an analytics and ML platform tracking 65 tech skills from 9 live APIs, with Holt-Winters forecasts to 2028 and a RandomForest salary model (R² 0.87).">
 <meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#07070f">
+<meta name="theme-color" content="#efeee8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%235ee7c2'%3ER%3C/text%3E%3C/svg%3E">
 <script>
-  (function () {
-    var V = ['product', 'eng', 'ops'], v = 'product';
-    try {
-      var q = new URLSearchParams(location.search).get('view'), s = localStorage.getItem('rps-view');
-      v = V.indexOf(q) > -1 ? q : (V.indexOf(s) > -1 ? s : 'product');
-    } catch (e) {}
-    document.documentElement.setAttribute('data-view', v);
-    document.documentElement.classList.add('js');
-  })();
+  document.documentElement.classList.add('js');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../case-redesign.css">
 </head>
 <body data-root="../">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="../index.html" class="logo" data-keep-view aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
+    <a href="../index.html" class="logo" aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="../index.html#work" data-keep-view>All case studies</a></li>
-        <li><a href="../index.html#skills" data-keep-view>Skills</a></li>
-        <li><a href="../index.html#contact" data-keep-view>Contact</a></li>
+        <li><a href="../index.html#work">All case studies</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="viewswitch" role="group" aria-label="Show my profile for">
-      <button type="button" data-set-view="product" aria-pressed="true"><span class="vs-long">Product</span><span class="vs-short">Product</span></button>
-      <button type="button" data-set-view="eng" aria-pressed="false"><span class="vs-long">Engineering</span><span class="vs-short">Eng</span></button>
-      <button type="button" data-set-view="ops" aria-pressed="false"><span class="vs-long">Operations</span><span class="vs-short">Ops</span></button>
-    </div>
   </div>
 </header>
 
 <main id="main">
   <section class="case-hero">
     <div class="wrap">
-      <a class="back" href="../index.html#work" data-keep-view><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
+      <a class="back" href="../index.html#work"><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
       <h1>SkillRadar: which tech skills are worth learning next?</h1>
       <p class="eyebrow" style="margin-top:14px">Capstone project · 2024</p>
       <p class="lede">An end-to-end analytics and machine-learning platform that answers three questions: which tech skills are in demand, what they pay, and where the market is heading in 2027–28.</p>
@@ -79,21 +67,16 @@
 
   <section class="case-section">
     <div class="wrap">
-      <h2>Three ways to read this project</h2>
-      <p class="sub">All of them are here. The one that matches the view you picked comes first.</p>
-      <div class="lenses">
-          <article class="lens" data-lens="product">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Product lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Started from the user's question, not the data: what should I learn, what will it pay, and will it still matter in two years?</li><li>Two ways to explore the answers: an interactive Streamlit app and a Flask web dashboard.</li><li>Forecasts are shown with 80% confidence intervals, so the uncertainty is visible.</li></ul>
-          </article>
-          <article class="lens" data-lens="eng">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Engineering lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Python pipeline pulling live data from <strong>9 public APIs</strong>, covering <strong>65 tech skills</strong>.</li><li><strong>Holt-Winters</strong> time-series forecasting (statsmodels) to 2028.</li><li><strong>RandomForest</strong> salary predictor (scikit-learn) with <strong>R² 0.87</strong>.</li><li>Plotly charts served through Streamlit and Flask.</li></ul>
-          </article>
-          <article class="lens" data-lens="ops">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Operations lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>One repeatable pipeline from data collection to dashboards.</li><li>Forecasts that can support planning decisions, such as which skills a team should hire or train for.</li></ul>
-          </article>
+      <h2>Research, data &amp; product delivery</h2>
+      <div class="contributions">
+        <ol class="contribution-list">
+          <li>Framed the analysis around practical questions: which skills are in demand, what they pay and how demand may change.</li>
+          <li>Built a Python pipeline collecting live data from 9 public APIs across 65 technology skills.</li>
+          <li>Forecast demand to 2028 with Holt-Winters models and visible 80% confidence intervals.</li>
+          <li>Trained a RandomForest salary model with an R² of 0.87.</li>
+          <li>Presented results through Plotly visualisations in Streamlit and Flask dashboards.</li>
+        </ol>
+        <aside class="contribution-note"><b>From research to decisions</b>The pipeline turns market signals into forecasts that can inform skill planning, hiring and training.</aside>
       </div>
     </div>
   </section>
@@ -107,13 +90,13 @@
       </div>
 
       <div class="hero-actions" style="margin-top:28px">
-        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
-        <a class="btn btn-ghost" href="../index.html#contact" data-keep-view>Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download resume</a>
+        <a class="btn btn-ghost" href="../index.html#contact">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <nav class="case-nav" aria-label="More case studies">
-        <a href="pennywise.html" data-keep-view><small>← previous</small><b>PennyWise</b></a>
-        <a href="sauce-and-spoons.html" data-keep-view><small>next →</small><b>Sauce and Spoons</b></a>
+        <a href="pennywise.html"><small>← previous</small><b>PennyWise</b></a>
+        <a href="sauce-and-spoons.html"><small>next →</small><b>Sauce and Spoons</b></a>
       </nav>
     </div>
   </section>

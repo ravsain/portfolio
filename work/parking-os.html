@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Society Vehicle &amp; Parking OS · Case study · Ravender Pratap Singh</title>
+<meta name="description" content="A multi-society gate and parking platform with visitor passes, live occupancy, vehicle lookup and camera plate OCR, built with FastAPI, PostgreSQL, Redis and React.">
+<meta name="author" content="Ravender Pratap Singh">
+<link rel="canonical" href="https://ravsain.github.io/portfolio/work/parking-os.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Society Vehicle &amp; Parking OS · Ravender Pratap Singh">
+<meta property="og:description" content="Gate operations and live parking for multiple residential societies, built with FastAPI, PostgreSQL, Redis and React.">
+<meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#efeee8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23e6e5dc'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%23355d45'%3ER%3C/text%3E%3C/svg%3E">
+<script>document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../case-redesign.css">
+</head>
+<body data-root="../">
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="../index.html" class="logo" aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="../index.html#work">All case studies</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="case-hero">
+    <div class="wrap">
+      <a class="back" href="../index.html#work"><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
+      <h1>Society Vehicle &amp; Parking OS</h1>
+      <p class="eyebrow" style="margin-top:14px">Personal project · 2026</p>
+      <p class="lede">A multi-society gate and parking platform connecting visitor entry, vehicle lookup and live parking occupancy, with workflows for administrators, guards and residents.</p>
+      <dl class="case-meta">
+        <div><dt>Type</dt><dd>Gate operations and parking platform</dd></div>
+        <div><dt>Timeline</dt><dd>2026</dd></div>
+        <div><dt>Stack</dt><dd>FastAPI, PostgreSQL, Redis, React, WebSockets, OCR</dd></div>
+        <div><dt>Deployment</dt><dd>Docker for cloud or self-hosting</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <h2>How it fits together</h2>
+      <h3 class="mono" style="margin-top:22px;font-size:13px;color:var(--text-3);font-weight:500">// gate operations</h3>
+      <div class="flow" role="list" aria-label="Gate operations">
+        <div class="flow-node"><small>people</small><b>Admin · guard · resident</b><span>Role-based society workflows</span></div>
+        <span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+        <div class="flow-node hl"><small>application</small><b>React + FastAPI</b><span>Visitor passes, entry and exit, search and alerts</span></div>
+        <span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+        <div class="flow-node"><small>records</small><b>PostgreSQL</b><span>Society and vehicle data</span></div>
+      </div>
+      <h3 class="mono" style="margin-top:22px;font-size:13px;color:var(--text-3);font-weight:500">// live occupancy</h3>
+      <div class="flow" role="list" aria-label="Live parking occupancy">
+        <div class="flow-node"><small>events</small><b>Vehicle entry / exit</b><span>Updates parking availability</span></div>
+        <span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+        <div class="flow-node hl"><small>state</small><b>Redis counters</b><span>Occupancy with pub/sub updates</span></div>
+        <span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span>
+        <div class="flow-node"><small>interface</small><b>WebSockets</b><span>Live occupancy in the React app</span></div>
+      </div>
+      <p class="flow-caption">Camera plate OCR supports vehicle recognition alongside searchable gate records and alerts.</p>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <h2>Product work &amp; implementation</h2>
+      <div class="contributions">
+        <ol class="contribution-list">
+          <li>Built a multi-society platform for gate entry and exit, visitor passes, vehicle search and alerts.</li>
+          <li>Provided distinct workflows for administrators, security guards and residents.</li>
+          <li>Tracked live parking occupancy with Redis counters, pub/sub and WebSocket updates.</li>
+          <li>Added camera-based number-plate OCR to support vehicle recognition at the gate.</li>
+          <li>Packaged the application with Docker for cloud deployment or self-hosting.</li>
+        </ol>
+        <aside class="contribution-note"><b>One operating picture</b>Gate activity, vehicle records and parking availability are brought together for multiple residential societies.</aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="case-section">
+    <div class="wrap">
+      <h2>Outcome</h2>
+      <div class="outcome">
+        <p>A deployable platform for society gate operations and parking, with real-time occupancy and vehicle recognition.</p>
+        <div class="outcome-stats"><div><b>Multi-society</b><span>separate community workflows</span></div><div><b>Live</b><span>Redis and WebSocket occupancy</span></div><div><b>Docker</b><span>cloud or self-hosted</span></div></div>
+      </div>
+      <div class="hero-actions" style="margin-top:28px">
+        <a class="btn btn-primary" href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download resume</a>
+        <a class="btn btn-ghost" href="../index.html#contact">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <nav class="case-nav" aria-label="More case studies">
+        <a href="vervebot-pos.html"><small>← previous</small><b>Vervebot POS</b></a>
+        <a href="kanbanhub.html"><small>next →</small><b>KanbanHub</b></a>
+      </nav>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <span>© <span data-year>2026</span> Ravender Pratap Singh</span>
+    <span>Press <kbd>~</kbd> to open the terminal</span>
+    <div class="footer-links">
+      <button type="button" class="term-open" data-terminal aria-label="Open terminal">&gt;_ terminal</button>
+      <a href="mailto:ravsainz@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://www.linkedin.com/in/r-p-s" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+      <a href="https://github.com/ravsain" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>

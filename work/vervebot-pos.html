@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-view="product">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,50 +12,38 @@
 <meta property="og:description" content="How Ravender Pratap Singh led a from-scratch POS redesign in Go, integrated an in-house payment gateway, rolled out a Python LLM agent and moved the team to Scrumban.">
 <meta property="og:image" content="https://ravsain.github.io/portfolio/assets/og.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#07070f">
+<meta name="theme-color" content="#efeee8">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2307070f'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-weight='700' font-size='34' fill='%235ee7c2'%3ER%3C/text%3E%3C/svg%3E">
 <script>
-  (function () {
-    var V = ['product', 'eng', 'ops'], v = 'product';
-    try {
-      var q = new URLSearchParams(location.search).get('view'), s = localStorage.getItem('rps-view');
-      v = V.indexOf(q) > -1 ? q : (V.indexOf(s) > -1 ? s : 'product');
-    } catch (e) {}
-    document.documentElement.setAttribute('data-view', v);
-    document.documentElement.classList.add('js');
-  })();
+  document.documentElement.classList.add('js');
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../case-redesign.css">
 </head>
 <body data-root="../">
 <a class="skip-link" href="#main">Skip to content</a>
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="../index.html" class="logo" data-keep-view aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
+    <a href="../index.html" class="logo" aria-label="Ravender Pratap Singh, home">RPS<span>.</span></a>
     <nav aria-label="Main">
       <ul class="nav-links">
-        <li><a href="../index.html#work" data-keep-view>All case studies</a></li>
-        <li><a href="../index.html#skills" data-keep-view>Skills</a></li>
-        <li><a href="../index.html#contact" data-keep-view>Contact</a></li>
+        <li><a href="../index.html#work">All case studies</a></li>
+        <li><a href="../index.html#skills">Skills</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="viewswitch" role="group" aria-label="Show my profile for">
-      <button type="button" data-set-view="product" aria-pressed="true"><span class="vs-long">Product</span><span class="vs-short">Product</span></button>
-      <button type="button" data-set-view="eng" aria-pressed="false"><span class="vs-long">Engineering</span><span class="vs-short">Eng</span></button>
-      <button type="button" data-set-view="ops" aria-pressed="false"><span class="vs-long">Operations</span><span class="vs-short">Ops</span></button>
-    </div>
   </div>
 </header>
 
 <main id="main">
   <section class="case-hero">
     <div class="wrap">
-      <a class="back" href="../index.html#work" data-keep-view><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
+      <a class="back" href="../index.html#work"><i class="fas fa-arrow-left" aria-hidden="true"></i> All case studies</a>
       <h1>Rebuilding a Point of Sale from scratch</h1>
       <p class="eyebrow" style="margin-top:14px">Vervebot · Apr 2025 – present</p>
       <p class="lede">At Vervebot I led the end-to-end redesign of the company's Point of Sale system on a Go backend, drove the integration of an in-house payment gateway, rolled out a Python LLM agent for merchants, and moved the team to Scrumban to deliver it all.</p>
@@ -77,27 +65,22 @@
         <div class="flow" role="list" aria-label="AI agent"><div class="flow-node"><small>input</small><b>Sales activity</b><span>Live data from the POS</span></div><span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span><div class="flow-node hl"><small>agent</small><b>Python LLM agent</b><span>Integrated into the Go POS</span></div><span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span><div class="flow-node"><small>output</small><b>Merchant help</b><span>Real-time sales insights and automated support answers</span></div></div>
         <h3 class="mono" style="margin-top:22px;font-size:13px;color:var(--text-3);font-weight:500">// delivery</h3>
         <div class="flow" role="list" aria-label="Delivery"><div class="flow-node"><small>plan</small><b>Specs &amp; PRDs</b><span>Client requirements turned into sprint-ready work</span></div><span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span><div class="flow-node hl"><small>flow</small><b>Scrumban board</b><span>Standups, grooming and tracking in Jira and Trello</span></div><span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span><div class="flow-node"><small>gate</small><b>Automated tests</b><span>Playwright end-to-end and API automation</span></div><span class="flow-arrow" aria-hidden="true"><i class="fas fa-arrow-right"></i></span><div class="flow-node"><small>ship</small><b>Release</b><span>Bugs caught before they reach merchants</span></div></div>
-      <p class="flow-caption">Three views of the same system: how a request moves, how the AI agent works, and how the work got delivered.</p>
+      <p class="flow-caption">A system from initial request to release, with dedicated paths for payments, merchant assistance and quality checks.</p>
     </div>
   </section>
 
   <section class="case-section">
     <div class="wrap">
-      <h2>Three ways to read this project</h2>
-      <p class="sub">All of them are here. The one that matches the view you picked comes first.</p>
-      <div class="lenses">
-          <article class="lens" data-lens="product">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Product lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Translated client and business requirements into technical specs and PRDs for each sprint.</li><li>Owned requirements and backlog priorities for the redesign, keeping business goals and engineering work aligned.</li><li>Shaped the payment gateway integration around the company's revenue goals.</li><li>Defined what the AI agent should do for merchants: real-time sales insights and automated answers to support queries.</li></ul>
-          </article>
-          <article class="lens" data-lens="eng">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Engineering lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Rebuilt the POS backend in <strong>Go (Golang)</strong>, designed to scale, with goroutines handling concurrent API load.</li><li>Integrated a <strong>Python LLM agent</strong> into the Go POS for sales insights and support automation.</li><li>Integrated the custom <strong>in-house payment gateway</strong>.</li><li>Built <strong>Playwright</strong> end-to-end suites and API automation around critical user workflows.</li></ul>
-          </article>
-          <article class="lens" data-lens="ops">
-            <div class="lens-head"><i class="dot" aria-hidden="true"></i><h3>Operations lens</h3><span class="lens-badge">matches your view</span></div>
-            <ul class="points"><li>Moved the development team to <strong>Scrumban</strong>: daily standups, backlog grooming and task tracking in Trello and custom Jira tooling.</li><li>Coordinated the payment gateway rollout between business and engineering.</li><li>Automated regression scenarios to cut regression testing time and catch defects before release.</li><li>Bridged clients and engineering so every sprint started from a clear spec.</li></ul>
-          </article>
+      <h2>My role &amp; contributions</h2>
+      <div class="contributions">
+        <ol class="contribution-list">
+          <li>Led the redesign from client requirements and PRDs through backlog priorities and release coordination.</li>
+          <li>Rebuilt the POS on a scalable Go backend and integrated the in-house payment gateway.</li>
+          <li>Shipped a Python LLM agent for merchant sales insights and automated support answers.</li>
+          <li>Introduced Scrumban with Jira and Trello, aligning business and engineering around sprint work.</li>
+          <li>Added Playwright end-to-end and API automation to protect critical workflows and regression checks.</li>
+        </ol>
+        <aside class="contribution-note"><b>One connected delivery</b>Product decisions, backend implementation, test coverage and team workflow were handled as parts of the same POS rebuild.</aside>
       </div>
     </div>
   </section>
@@ -111,13 +94,13 @@
       </div>
 
       <div class="hero-actions" style="margin-top:28px">
-        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download CV</a>
-        <a class="btn btn-ghost" href="../index.html#contact" data-keep-view>Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+        <a class="btn btn-primary" data-cv href="../resume/Ravender_Pratap_Singh_Resume.pdf" download><i class="fas fa-download" aria-hidden="true"></i> Download resume</a>
+        <a class="btn btn-ghost" href="../index.html#contact">Get in touch <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
       </div>
 
       <nav class="case-nav" aria-label="More case studies">
-        <a href="sauce-and-spoons.html" data-keep-view><small>← previous</small><b>Sauce and Spoons</b></a>
-        <a href="kanbanhub.html" data-keep-view><small>next →</small><b>KanbanHub</b></a>
+        <a href="sauce-and-spoons.html"><small>← previous</small><b>Sauce and Spoons</b></a>
+        <a href="parking-os.html"><small>next →</small><b>Society Vehicle &amp; Parking OS</b></a>
       </nav>
     </div>
   </section>
